@@ -20,7 +20,7 @@ const fetchUsersFailure = (error) => ({
 
 const fetchUsers = () => (dispatch) => {
   dispatch(fetchUsersRequest());
-  axios.get('https://jsonplaceholder.typicode.com/users')
+  axios.get('https://glacial-basin-02412.herokuapp.com')
     .then((response) => {
       // response.data is the array of users
       const users = response.data;
