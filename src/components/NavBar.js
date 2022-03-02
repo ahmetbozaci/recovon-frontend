@@ -10,7 +10,7 @@ const NavBar = () => (
         logo
       </li>
       <li><Link to="/" className="nav-link"> Doctors </Link></li>
-      <li><Link to="/MyAppointment" className="nav-link">My Appointments</Link></li>
+      <li><Link to="/myappointments" className="nav-link">My Appointments</Link></li>
     </ul>
     <button type="button">logout</button>
     <div>
