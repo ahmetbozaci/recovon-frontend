@@ -1,7 +1,6 @@
 import { createUserAction } from './signup';
 
-// const baseURL = `${process.env.REACT_APP_CAR_RENT_API_URL}/signup`;
-const baseURL2 = 'http://localhost:3000/signup';
+const baseURL = `${process.env.REACT_APP_CAR_RENT_API_URL}/signup`;
 
 export const addUser = async (user) => {
   const newUser = {
@@ -14,7 +13,8 @@ export const addUser = async (user) => {
       password_confirmation: user.passwordConfirmation,
     }),
   };
-  const response = await fetch(baseURL2, newUser);
+  console.log(baseURL);
+  const response = await fetch(baseURL, newUser);
   return response;
 };
 
