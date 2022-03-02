@@ -1,10 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
-import store from './redux/store';
+import store from './Redux/store';
 import './app.css';
 import {
-  Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm,
+  Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm, NavBar,
 } from './components/Index';
 // import UserContainer from './components/UserContainer';
 
@@ -13,6 +13,8 @@ function App() {
     <Provider store={store}>
       <div className="App">
         {/* <UserContainer /> */}
+        <NavBar />
+
         <Routes>
           <Route path="/" element={<Doctor />} />
           <Route path="doctor" element={<Doctor />} />
@@ -26,5 +28,4 @@ function App() {
     </Provider>
   );
 }
-
 export default App;
