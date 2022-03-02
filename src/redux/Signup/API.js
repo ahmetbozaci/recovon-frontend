@@ -1,6 +1,6 @@
-import { createUserAction } from './signup';
+import { createUserAction } from './signupReducer';
 
-const baseURL = `${process.env.REACT_APP_CAR_RENT_API_URL}/signup`;
+const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/signup`;
 
 export const addUser = async (user) => {
   const newUser = {
@@ -13,7 +13,6 @@ export const addUser = async (user) => {
       password_confirmation: user.passwordConfirmation,
     }),
   };
-  console.log(baseURL);
   const response = await fetch(baseURL, newUser);
   return response;
 };
