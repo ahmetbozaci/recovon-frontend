@@ -7,7 +7,6 @@ const Footer = () => (
       <li>facebook</li>
       <li>instagram</li>
       <li>vimeo</li>
-      <li>Pinterest</li>
     </ul>
   </div>
 );
