@@ -12,7 +12,7 @@ const Doctor = () => (
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3 style={{ color: 'blue' }}>Doctors nam</h3>
+          <h3 style={{ color: 'blue' }}>Doctors name</h3>
           <button type="button">Create-appointment</button>
         </Carousel.Caption>
       </Carousel.Item>
@@ -24,7 +24,7 @@ const Doctor = () => (
         />
 
         <Carousel.Caption>
-          <h3 style={{ color: 'blue' }}>Doctors nam</h3>
+          <h3 style={{ color: 'blue' }}>Doctors name</h3>
           <button type="button">Create-appointment</button>
         </Carousel.Caption>
       </Carousel.Item>
@@ -36,7 +36,7 @@ const Doctor = () => (
         />
 
         <Carousel.Caption>
-          <h3 style={{ color: 'blue' }}>Doctors nam</h3>
+          <h3 style={{ color: 'blue' }}>Doctors name</h3>
           <button type="button">Create-appointment</button>
         </Carousel.Caption>
       </Carousel.Item>

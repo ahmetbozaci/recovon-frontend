@@ -5,7 +5,7 @@ import Footer from './Footer';
 import '../app.css';
 
 const NavBar = () => (
-  <div className="Navigation1 align-end d-block">
+  <div className="Navigation1">
     <ul className="navbar-nav mr-auto">
       <li>
         <img src="" alt="" />
