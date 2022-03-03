@@ -2,20 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Footer from './Footer';
+import '../app.css';
 
 const NavBar = () => (
-  <div>
+  <div className="Navigation1">
     <ul className="navbar-nav mr-auto">
-      <li>
-        <img src="" alt="" />
-        logo
+      <li className="logo">
+        <img src="ddfdfadf" alt="logo" />
       </li>
       <li><Link to="/" className="nav-link"> Doctors </Link></li>
       <li><Link to="/myappointments" className="nav-link">My Appointments</Link></li>
       <li><Link to="/appointment" className="nav-link">Appointment</Link></li>
 
     </ul>
-    <Button type="button">logout</Button>
+    <Button className="logout" type="button">logout</Button>
     <div>
       <Footer />
     </div>
