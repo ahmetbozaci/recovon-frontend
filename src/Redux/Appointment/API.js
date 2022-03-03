@@ -1,6 +1,6 @@
 import { createAppointmentAction } from './appointmentReducer';
 
-const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/signup`;
+const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/appointments`;
 
 export const addAppointment = async (appointment) => {
   const newAppointment = {
