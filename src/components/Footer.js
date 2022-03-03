@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Footer = () => (
-  <div>
+  <div className="iconss">
     <ul>
-      <li>twitter</li>
-      <li>facebook</li>
-      <li>instagram</li>
-      <li>vimeo</li>
+      <li>t </li>
+      <li>f</li>
+      <li>i</li>
+      <li>y</li>
     </ul>
   </div>
 );
