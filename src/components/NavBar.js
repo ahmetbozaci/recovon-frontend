@@ -12,6 +12,8 @@ const NavBar = () => (
       </li>
       <li><Link to="/" className="nav-link"> Doctors </Link></li>
       <li><Link to="/myappointments" className="nav-link">My Appointments</Link></li>
+      <li><Link to="/appointment" className="nav-link">Appointment</Link></li>
+
     </ul>
     <Button type="button">logout</Button>
     <div>

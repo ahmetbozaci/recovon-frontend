@@ -22,6 +22,7 @@ function App() {
           <Route path="doctor" element={<Doctor />} />
           <Route path="appointments" element={<Appointment />} />
           <Route path="myappointments" element={<MyAppointment />} />
+          <Route path="appointment" element={<Appointment />} />
           <Route path="*" element={<NotMatch />} />
           <Route path="signup" element={<SignupForm />} />
           <Route path="login" element={<LoginForm />} />
