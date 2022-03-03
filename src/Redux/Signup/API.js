@@ -1,4 +1,4 @@
-import { createUserAction } from './
+import { createUserAction } from './signupReducer';
 
 const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/signup`;
 
