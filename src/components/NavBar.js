@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Footer from './Footer';
 
-const NavBar = () => (
+const NavBar = () => {
+  const 
+  return (
   <div>
     <ul className="navbar-nav mr-auto">
       <li>
@@ -20,6 +22,8 @@ const NavBar = () => (
 
   </div>
 
-);
+  )
+
+};
 
 export default NavBar;

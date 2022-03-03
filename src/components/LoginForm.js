@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logInUser } from '../Redux/logIn/logInActions';
 
@@ -7,16 +7,21 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  console.log('hi');
+  // console.log('hi');
+
+  const reduxState = useSelector((state) => state.logInReducer);
+  // console.log('redux state', reduxState);
+
+  useEffect(() => {
+    if (reduxState.loggedIn === true) {
+      navigate('/doctor');
+    }
+  }, [reduxState]);
 
   const [state, setState] = useState({
     email: '',
     password: '',
   });
-
-  // useEffect(() => {
-  //   dispatch(logInUser());
-  // }, []);
 
   const { email, password } = state;
 
