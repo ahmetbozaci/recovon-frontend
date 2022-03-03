@@ -1,5 +1,6 @@
 body {
   display: block;
+  height: 100%;
 
 }
 
@@ -8,12 +9,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
-  height: 100%;
+  width: 25%;
+  height: 560px;
   top: 0;
   bottom: 0;
   left: 0;
   background-color: blueviolet;
+  padding-left: 1rem;
+}
+
+.logout {
+  margin: 1rem;
 }
 
 .App {
@@ -30,4 +36,5 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-top: 5rem
 }

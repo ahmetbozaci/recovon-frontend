@@ -7,14 +7,13 @@ import '../app.css';
 const NavBar = () => (
   <div className="Navigation1">
     <ul className="navbar-nav mr-auto">
-      <li>
-        <img src="" alt="" />
-        logo
+      <li className="logo">
+        <img src="ddfdfadf" alt="logo" />
       </li>
       <li><Link to="/" className="nav-link"> Doctors </Link></li>
       <li><Link to="/myappointments" className="nav-link">My Appointments</Link></li>
     </ul>
-    <Button type="button">logout</Button>
+    <Button className="logout" type="button">logout</Button>
     <div>
       <Footer />
     </div>
