@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createUser } from '../Redux/Signup/API';
+import { createUser } from '../redux/Signup/API';
 
 const Signup = () => {
   const dispatch = useDispatch();
