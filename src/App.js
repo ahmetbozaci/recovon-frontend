@@ -3,6 +3,8 @@ import { Provider } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import store from './redux/store';
 import './app.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import {
   Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm, NavBar,
 } from './components/Index';
