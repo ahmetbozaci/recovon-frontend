@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Footer from './Footer';
+import '../app.css';
 
 const NavBar = () => (
-  <div>
+  <div className="Navigation1 align-end d-block">
     <ul className="navbar-nav mr-auto">
       <li>
         <img src="" alt="" />
