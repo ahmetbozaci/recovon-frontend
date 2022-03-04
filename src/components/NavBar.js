@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
 import Footer from './Footer';
+import LogOut from './LogOut';
 import '../app.css';
 
 const NavBar = () => (
@@ -13,14 +13,10 @@ const NavBar = () => (
       <li><Link to="/" className="nav-link"> Doctors </Link></li>
       <li><Link to="/myappointments" className="nav-link">My Appointments</Link></li>
     </ul>
-    <Link to="/logoutpage" className="nav-link">
-      {' '}
-      <Button type="button">logout</Button>
-    </Link>
+    <LogOut />
     <div>
       <Footer />
     </div>
-
   </div>
 
 );

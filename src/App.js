@@ -9,6 +9,7 @@ import {
   Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm, NavBar, LogoutPage,
 } from './components/Index';
 // import UserContainer from './components/UserContainer';
+
 const SidebarLayout = () => (
   <>
     <NavBar />
@@ -20,6 +21,9 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
+
+        <NavBar />
+
         {/* <UserContainer /> */}
 
         <Routes>
