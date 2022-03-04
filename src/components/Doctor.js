@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../app.css';
 import { Carousel } from 'react-bootstrap';
+// import { Slide } from 'react-slideshow-image';
 
 const Doctor = () => {
   const [data, setdata] = useState([]);
@@ -13,7 +14,6 @@ const Doctor = () => {
       console.log(response.data);
       // const datas = await response.data.json();
       docdata = response.data;
-      console.log(docdata, 'hello na pablo de do us');
       setdata(docdata);
     } catch (e) {
       throw e.toString();
@@ -30,34 +30,30 @@ const Doctor = () => {
 
   return (
     <section>
-      <div className="row">
-        {
-          data.map((doc) => {
-            console.log(doc, 'hakldfld');
-            return (
-              <div className="carousel" key={doc.id}>
-                <Carousel>
-                  <Carousel.Item>
-                    <img
-                      className="d- w-35"
-                      src={doc.picture}
-                      alt="Third slide"
-                    />
+      {
+        data.map((doc) => (
+          <div className="carousel-inner" key={doc.id}>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d"
+                  src={doc.picture}
+                  alt="First slide"
+                />
+                <Carousel.Caption>
+                  <h3 style={{ color: 'blue' }}>
+                    Dr .
+                    {' '}
+                    {doc.name}
+                  </h3>
+                  <button type="button">Create-appointment</button>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+          </div>
+        ))
+      }
 
-                    <Carousel.Caption>
-                      <h3 style={{ color: 'blue' }}>
-                        Dr .
-                        { doc.name}
-                      </h3>
-                      <button type="button">Create-appointment</button>
-                    </Carousel.Caption>
-                  </Carousel.Item>
-                </Carousel>
-              </div>
-            );
-          })
-        }
-      </div>
     </section>
   );
 };
