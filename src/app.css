@@ -70,14 +70,13 @@ body {
   padding-top: 2rem;
 }
 
-.hg {
+/* .hg {
   size: 1px;
-}
+} */
 
 .downbtn {
-padding: 1;
-margin: 1;
-
+  padding: 1px;
+  margin: 1px;
 }
 
 .downbtn :hover {
