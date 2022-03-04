@@ -1,11 +1,14 @@
+/** @format */
+
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { createUser } from '../Redux/Signup/API';
 import './style/signup.css';
 
 const Signup = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [state, setState] = useState({
     name: '',
@@ -22,6 +25,13 @@ const Signup = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setState({ ...state, [name]: value });
+  };
+
+  const handleClick = () => {
+    const signup = false;
+    if (signup) {
+      navigate('/doctor');
+    }
   };
 
   const handleSubmit = (event) => {
@@ -87,14 +97,17 @@ const Signup = () => {
         />
       </Form.Group>
       <div className="d-grid gap-2 mt-3">
-        <Button variant="primary" size="lg" type="submit">
+        <Button variant="primary" size="lg" type="submit" onClick={handleClick}>
           Sign Up
         </Button>
       </div>
       <p className="text-muted signin-text">
         <small>
           Already registered
-          <Link to="/login" className="signin-link"> sign in</Link>
+          <Link to="/login" className="signin-link">
+            {' '}
+            sign in
+          </Link>
         </small>
       </p>
     </Form>
