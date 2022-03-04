@@ -7,7 +7,7 @@ const logInUserSuccess = (users) => ({
   payload: users,
 });
 
-export const addUser = async (user) => {
+export const signInUser = async (user) => {
   const exUser = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -18,12 +18,17 @@ export const addUser = async (user) => {
   };
   const response = await fetch(baseURL, exUser);
   const data = await response.json();
-  console.log('data', data);
+  // console.log('data', data);
   localStorage.setItem('token', JSON.stringify(data.jwt));
+  localStorage.setItem('ANYNAME', JSON.stringify(data.logged_out));
   return data;
 };
 
 export const logInUser = (user) => async (dispatch) => {
-  addUser(user);
-  dispatch(logInUserSuccess(user));
+  const xyz = await signInUser(user);
+  const logInDetails = {
+    loggedOut: xyz.logged_out,
+    loggedIn: !xyz.logged_out,
+  };
+  dispatch(logInUserSuccess(logInDetails));
 };

@@ -7,14 +7,15 @@ const LogOut = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const reduxState = useSelector((state) => state.logOutReducer);
-  console.log('reduxState---->', reduxState.loggedOut);
+  const state = useSelector((state) => state.logOutReducer);
+  // console.log('useSelector logout state', state);
+  const { loggedOut } = state;
 
   useEffect(() => {
-    if (reduxState.loggedOut === true) {
+    if (loggedOut) {
       navigate('/login');
     }
-  }, [reduxState]);
+  }, [loggedOut]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -23,7 +24,7 @@ const LogOut = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <button type="submit">Logout</button>
+      <button type="submit" onClick={handleSubmit}>Logout</button>
     </form>
   );
 };

@@ -1,17 +1,15 @@
 import { LOGOUT_USER_SUCCESS } from './logOutActions';
 
 const initialState = {
-  loggedIn: true,
   loggedOut: false,
 };
 
 const logOutReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGOUT_USER_SUCCESS:
+      // console.log('action.payload line 11', action.payload);
       return {
-        users: action.payload,
-        loggedIn: false,
-        loggedOut: localStorage.getItem('logged_out'),
+        ...action.payload,
       };
     default:
       return state;

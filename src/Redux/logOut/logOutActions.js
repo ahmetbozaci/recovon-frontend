@@ -14,12 +14,16 @@ export const quitUser = async () => {
   };
   const response = await fetch(logoutURL, currUser);
   const data = await response.json();
-  localStorage.setItem('logged_out', JSON.stringify(data.logged_out));
-  console.log('logout data', data);
+  localStorage.setItem('ANYNAME', JSON.stringify(data.logged_out));
+  // console.log('logout data', data);
   return data;
 };
 
-export const logOutUser = (user) => async (dispatch) => {
-  quitUser(user);
-  dispatch(logOutUserSuccess(user));
+export const logOutUser = () => async (dispatch) => {
+  const xyz = await quitUser();
+  // console.log('xyz', xyz);
+  const logOutDetails = {
+    loggedOut: xyz.logged_out,
+  };
+  dispatch(logOutUserSuccess(logOutDetails));
 };
