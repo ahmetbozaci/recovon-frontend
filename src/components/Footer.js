@@ -1,12 +1,16 @@
 import React from 'react';
+import {
+  Twitter, Facebook, Instagram, Youtube,
+} from 'react-bootstrap-icons';
+import '../app.css';
 
 const Footer = () => (
-  <div>
-    <ul>
-      <li>twitter</li>
-      <li>facebook</li>
-      <li>instagram</li>
-      <li>vimeo</li>
+  <div className="iconss">
+    <ul className="iconss">
+      <Twitter />
+      <Facebook />
+      <Instagram />
+      <Youtube />
     </ul>
   </div>
 );
