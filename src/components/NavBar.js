@@ -12,10 +12,11 @@ const NavBar = () => (
       </li>
       <li><Link to="/" className="nav-link"> Doctors </Link></li>
       <li><Link to="/myappointments" className="nav-link">My Appointments</Link></li>
-      <li><Link to="/appointment" className="nav-link">Appointment</Link></li>
-
     </ul>
-    <Button className="logout" type="button">logout</Button>
+    <Link to="/logoutpage" className="nav-link">
+      {' '}
+      <Button type="button">logout</Button>
+    </Link>
     <div>
       <Footer />
     </div>
