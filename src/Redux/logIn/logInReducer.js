@@ -1,9 +1,7 @@
-import { LOGIN_USER_SUCCESS } from './logInActions';
-// import { LOGOUT_USER_SUCCESS } from './logInActions';
+import { LOGIN_USER_SUCCESS, LOGOUT_USER_SUCCESS } from './logInActions';
 
 const initialState = {
-  loggedIn: false,
-  loggedOut: true,
+  loggedOut: false,
 };
 
 const logInReducer = (state = initialState, action) => {
@@ -14,6 +12,11 @@ const logInReducer = (state = initialState, action) => {
         // users: action.payload,
         // loggedIn: true,
         // loggedOut: false,
+        ...action.payload,
+      };
+    case LOGOUT_USER_SUCCESS:
+      // console.log('action.payload line 11', action.payload);
+      return {
         ...action.payload,
       };
     default:

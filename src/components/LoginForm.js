@@ -11,7 +11,7 @@ const LoginForm = () => {
   // console.log('redux state', reduxState);
 
   useEffect(() => {
-    if (reduxState.loggedIn === true) {
+    if (reduxState.loggedOut === false) {
       navigate('/doctor');
     }
   }, [reduxState]);

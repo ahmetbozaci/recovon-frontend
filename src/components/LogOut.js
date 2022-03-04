@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { logOutUser } from '../Redux/logOut/logOutActions';
+import { logOutUser } from '../Redux/logIn/logInActions';
 
 const LogOut = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const state = useSelector((state) => state.logOutReducer);
+  const state = useSelector((state) => state.logInReducer);
   // console.log('useSelector logout state', state);
   const { loggedOut } = state;
 
