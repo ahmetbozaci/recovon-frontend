@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import fetchMyApp from '../Redux/MyApp/myAppActions';
+import { fetchMyApp, deleteAppointment } from '../Redux/MyApp/myAppActions';
 // import fetchDoctor from '../Redux/Doctor/doctorActions';
 
 const MyAppointment = () => {
@@ -49,6 +49,16 @@ const MyAppointment = () => {
                             {' '}
                             <small className="text-muted">{d.time}</small>
                           </p>
+                          <button
+                            type="button"
+                            className="btn btn-outline-danger"
+                            onClick={() => {
+                              dispatch(deleteAppointment(d.id));
+                              window.location.reload(false);
+                            }}
+                          >
+                            Cancel
+                          </button>
                         </div>
                       </div>
                     </div>

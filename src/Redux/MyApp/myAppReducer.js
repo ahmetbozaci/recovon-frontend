@@ -2,6 +2,7 @@ import {
   FETCH_MY_APP_REQUEST,
   FETCH_MY_APP_SUCCESS,
   FETCH_MY_APP_FAILURE,
+  DELETE_MY_APP_SUCCESS,
 } from './myAppActions';
 
 const initialState = {
@@ -31,6 +32,12 @@ const myAppReducer = (state = initialState, action) => {
         myApp: [],
         error: action.payload,
       };
+
+    case DELETE_MY_APP_SUCCESS:
+      return {
+        myApp: state.myApp.filter((del) => del.id !== action.payload),
+      };
+
     default: return state;
   }
 };

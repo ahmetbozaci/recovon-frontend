@@ -15,5 +15,4 @@ const fetchDoctor = () => (dispatch) => {
       dispatch(fetchDoctorSuccess(doctors));
     });
 };
-
 export default fetchDoctor;
