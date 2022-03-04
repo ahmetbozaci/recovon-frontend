@@ -8,7 +8,7 @@ const LogOut = () => {
   const dispatch = useDispatch();
 
   const reduxState = useSelector((state) => state.logOutReducer);
-  console.log('logout---->', reduxState);
+  console.log('reduxState---->', reduxState.loggedOut);
 
   useEffect(() => {
     if (reduxState.loggedOut === true) {
