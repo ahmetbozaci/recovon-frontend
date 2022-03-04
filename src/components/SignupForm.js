@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { createUser } from '../Redux/Signup/API';
+import './style/signup.css';
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -33,43 +36,68 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <input
+    <Form onSubmit={handleSubmit} className="form m-auto mt-5">
+      <h1 className="text-center">Sign Up</h1>
+      <Form.Group className="mb-2" controlId="formBasicUsername">
+        <Form.Label>
+          <h5 className="text-muted">Username</h5>
+        </Form.Label>
+        <Form.Control
           placeholder="Username"
           type="text"
           name="name"
           value={name}
           onChange={handleChange}
         />
-        <input
-          placeholder="email"
+      </Form.Group>
+      <Form.Group className="mb-2" controlId="formBasicEmail">
+        <Form.Label>
+          <h5 className="text-muted">Email address</h5>
+        </Form.Label>
+        <Form.Control
+          placeholder="Enter email"
           type="text"
           name="email"
           value={email}
           onChange={handleChange}
         />
-        <input
-          placeholder="password"
+      </Form.Group>
+      <Form.Group className="mb-2" controlId="formBasicPassword">
+        <Form.Label>
+          <h5 className="text-muted">Password</h5>
+        </Form.Label>
+        <Form.Control
           type="password"
+          placeholder="Enter password"
           name="password"
           value={password}
           onChange={handleChange}
         />
-        <input
-          placeholder="password confirmation"
+      </Form.Group>
+      <Form.Group className="mb-2" controlId="formBasicPassword">
+        <Form.Label>
+          <h5 className="text-muted">Password confirmation</h5>
+        </Form.Label>
+        <Form.Control
           type="password"
+          placeholder="Enter password again"
           name="passwordConfirmation"
           value={passwordConfirmation}
           onChange={handleChange}
         />
-
-        <button placeholder="submit" type="submit">
+      </Form.Group>
+      <div className="d-grid gap-2 mt-3">
+        <Button variant="primary" size="lg" type="submit">
           Sign Up
-        </button>
-      </form>
-    </div>
+        </Button>
+      </div>
+      <p className="text-muted signin-text">
+        <small>
+          Already registered
+          <Link to="/login" className="signin-link"> sign in</Link>
+        </small>
+      </p>
+    </Form>
   );
 };
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Routes, Route, Outlet } from 'react-router-dom';
@@ -12,7 +13,7 @@ import {
 
 const SidebarLayout = () => (
   <>
-    <NavBar />
+    {/* <NavBar /> */}
     <Outlet />
   </>
 );
