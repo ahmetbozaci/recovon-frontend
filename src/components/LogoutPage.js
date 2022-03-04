@@ -20,8 +20,7 @@ function Logout() {
         <h2 className="hg2">Health is wealth, he who knows this knows peace </h2>
         <h1 className="hg3">Be HAPPY, Be HEALTHY</h1>
 
-        <button type="button">learn-more</button>
-        <button type="button">Begin your experience with Health-Guru</button>
+        <button className="downbtn" type="button">Begin your experience with Health-Guru</button>
       </div>
     </section>
   );

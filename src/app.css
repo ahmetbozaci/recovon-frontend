@@ -23,7 +23,7 @@ body {
 
 .App {
   width: 100%;
-  position: relative;
+  position: absolute;
   font-size: 2rem;
   display: flex;
   flex-direction: row;
@@ -43,6 +43,10 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .lls {
@@ -71,8 +75,24 @@ body {
 
 }
 
+.downbtn {
+padding: 1;
+margin: 1;
+
+}
+
+.downbtn :hover {
+  color: green;
+  border-radius: 0.5rem;
+  border: 2px solid wheat;
+}
+
 .welcomelg {
   background-image: url("doc.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+
+ 
 }
