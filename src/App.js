@@ -22,8 +22,6 @@ function App() {
     <Provider store={store}>
       <div className="App">
 
-        <NavBar />
-
         {/* <UserContainer /> */}
 
         <Routes>
