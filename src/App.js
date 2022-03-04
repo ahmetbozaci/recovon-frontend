@@ -8,13 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm, NavBar,
 } from './components/Index';
-// import UserContainer from './components/UserContainer';
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        {/* <UserContainer /> */}
         <NavBar />
 
         <Routes>

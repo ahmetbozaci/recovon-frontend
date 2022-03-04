@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
 import Footer from './Footer';
+import LogOut from './LogOut';
 
-const NavBar = () => {
-  const 
-  return (
+const NavBar = () => (
   <div>
     <ul className="navbar-nav mr-auto">
       <li>
@@ -15,15 +13,13 @@ const NavBar = () => {
       <li><Link to="/" className="nav-link"> Doctors </Link></li>
       <li><Link to="/myappointments" className="nav-link">My Appointments</Link></li>
     </ul>
-    <Button type="button">logout</Button>
+    <LogOut />
     <div>
       <Footer />
     </div>
 
   </div>
 
-  )
-
-};
+);
 
 export default NavBar;

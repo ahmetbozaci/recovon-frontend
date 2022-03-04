@@ -7,8 +7,6 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // console.log('hi');
-
   const reduxState = useSelector((state) => state.logInReducer);
   // console.log('redux state', reduxState);
 
