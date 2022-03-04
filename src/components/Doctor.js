@@ -5,14 +5,14 @@ import { Carousel } from 'react-bootstrap';
 
 const Doctor = () => {
   const [data, setdata] = useState([]);
-  const api = 'https://final-api-55.herokuapp.com/';
+  const api = 'https://final-api-55.herokuapp.com/doctors';
   let docdata = '';
   const fetchDoctor = async () => {
     try {
       const response = await axios.get(`${api}`);
-      console.log(response.data.users);
+      console.log(response.data);
       // const datas = await response.data.json();
-      docdata = response.data.users;
+      docdata = response.data;
       console.log(docdata, 'hello na pablo de do us');
       setdata(docdata);
     } catch (e) {
@@ -35,71 +35,24 @@ const Doctor = () => {
           data.map((doc) => {
             console.log(doc, 'hakldfld');
             return (
-              <div key={doc.id}>
-                <h1>{doc.ne}</h1>
-                <div className="carousel">
-                  <Carousel>
-                    <Carousel.Item>
-                      <img
-                        className="d- w-35"
-                        src="logo512.png"
-                        alt="First slide"
-                      />
-                      <Carousel.Caption>
-                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
-                        <button type="button">Create-appointment</button>
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d- w-35"
-                        src="logo512.png"
-                        alt="Second slide"
-                      />
+              <div className="carousel" key={doc.id}>
+                <Carousel>
+                  <Carousel.Item>
+                    <img
+                      className="d- w-35"
+                      src={doc.picture}
+                      alt="Third slide"
+                    />
 
-                      <Carousel.Caption>
-                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
-                        <button type="button">Create-appointment</button>
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d- w-35"
-                        src="logo512.png"
-                        alt="Third slide"
-                      />
-
-                      <Carousel.Caption>
-                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
-                        <button type="button">Create-appointment</button>
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d- w-35"
-                        src="logo512.png"
-                        alt="Third slide"
-                      />
-
-                      <Carousel.Caption>
-                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
-                        <button type="button">Create-appointment</button>
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d- w-35"
-                        src="logo512.png"
-                        alt="Third slide"
-                      />
-
-                      <Carousel.Caption>
-                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
-                        <button type="button">Create-appointment</button>
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                  </Carousel>
-                </div>
+                    <Carousel.Caption>
+                      <h3 style={{ color: 'blue' }}>
+                        Dr .
+                        { doc.name}
+                      </h3>
+                      <button type="button">Create-appointment</button>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                </Carousel>
               </div>
             );
           })
