@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../app.css';
-// import { Carousel } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 
 const Doctor = () => {
   const [data, setdata] = useState([]);
@@ -36,7 +36,70 @@ const Doctor = () => {
             console.log(doc, 'hakldfld');
             return (
               <div key={doc.id}>
-                <h1>{doc.name}</h1>
+                <h1>{doc.ne}</h1>
+                <div className="carousel">
+                  <Carousel>
+                    <Carousel.Item>
+                      <img
+                        className="d- w-35"
+                        src="logo512.png"
+                        alt="First slide"
+                      />
+                      <Carousel.Caption>
+                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
+                        <button type="button">Create-appointment</button>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d- w-35"
+                        src="logo512.png"
+                        alt="Second slide"
+                      />
+
+                      <Carousel.Caption>
+                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
+                        <button type="button">Create-appointment</button>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d- w-35"
+                        src="logo512.png"
+                        alt="Third slide"
+                      />
+
+                      <Carousel.Caption>
+                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
+                        <button type="button">Create-appointment</button>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d- w-35"
+                        src="logo512.png"
+                        alt="Third slide"
+                      />
+
+                      <Carousel.Caption>
+                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
+                        <button type="button">Create-appointment</button>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d- w-35"
+                        src="logo512.png"
+                        alt="Third slide"
+                      />
+
+                      <Carousel.Caption>
+                        <h3 style={{ color: 'blue' }}>Doctors name</h3>
+                        <button type="button">Create-appointment</button>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
               </div>
             );
           })
