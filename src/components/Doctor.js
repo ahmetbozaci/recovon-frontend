@@ -41,7 +41,7 @@ const Doctor = () => {
                   alt="First slide"
                 />
                 <Carousel.Caption>
-                  <h3 style={{ color: 'blue' }}>
+                  <h3 className="docname" style={{ color: 'blue' }}>
                     Dr .
                     {' '}
                     {doc.name}

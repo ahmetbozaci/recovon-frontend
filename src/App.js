@@ -1,32 +1,31 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import store from './Redux/store';
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
-  Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm,
+  Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm, NavBar, LogoutPage,
 } from './components/Index';
 // import UserContainer from './components/UserContainer';
 
-// const SidebarLayout = () => (
-//   <>
-//     {/* <NavBar /> */}
-//     {/* <Outlet /> */}
-//   </>
-// );
+const SidebarLayout = () => (
+  <>
+    <NavBar />
+    <Outlet />
+  </>
+);
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        {/* <NavBar /> */}
 
         {/* <UserContainer /> */}
 
         <Routes>
-          <Route>
+          <Route element={<SidebarLayout />}>
             <Route path="/" element={<Doctor />} />
             <Route path="doctor" element={<Doctor />} />
             <Route path="appointments" element={<Appointment />} />
@@ -36,7 +35,7 @@ function App() {
             <Route path="signup" element={<SignupForm />} />
             <Route path="login" element={<LoginForm />} />
           </Route>
-          {/* <Route path="logoutpage" element={<LogoutPage />} /> */}
+          <Route path="logoutpage" element={<LogoutPage />} />
         </Routes>
       </div>
     </Provider>
