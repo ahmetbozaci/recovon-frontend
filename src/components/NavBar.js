@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
 import Footer from './Footer';
+import LogOut from './LogOut';
 import '../app.css';
 
 const NavBar = () => (
@@ -12,14 +12,11 @@ const NavBar = () => (
       </li>
       <li><Link to="/" className="nav-link"> Doctors </Link></li>
       <li><Link to="/myappointments" className="nav-link">My Appointments</Link></li>
-      <li><Link to="/appointment" className="nav-link">Appointment</Link></li>
-
     </ul>
-    <Button className="logout" type="button">logout</Button>
+    <LogOut />
     <div>
       <Footer />
     </div>
-
   </div>
 
 );
