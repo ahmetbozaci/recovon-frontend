@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -47,13 +46,15 @@ const LoginForm = () => {
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12 col-md-8 col-lg-6 col-xl-5">
             <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
-              <div className="card-body p-5 text-center">
-                <h3 className="mb-5">Sign in</h3>
+              <div className="card-body p-5">
+                <h3 className="mb-5 text-center">Sign in</h3>
+
                 <form onSubmit={handleSubmit}>
-                  <label className="form-label">
-                    Email Address
+                  <div className="mb-3">
+                    <p htmlFor="exampleInputEmail1" className="form-label text-left">Email address</p>
                     <input
-                      className="form-control form-control-lg"
+                      className="form-control"
+                      id="exampleInputEmail1"
                       style={{ borderRadius: '1rem' }}
                       type="email"
                       placeholder="Email"
@@ -61,26 +62,36 @@ const LoginForm = () => {
                       value={email}
                       onChange={handleChange}
                     />
-                  </label>
-                  <input
-                    className="form-control form-control-lg"
-                    style={{ borderRadius: '1rem' }}
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    value={password}
-                    onChange={handleChange}
-                  />
-                  <button
-                    type="submit"
-                    className="btn btn-primary btn-lg btn-block"
-                  >
-                    Log In
-                  </button>
+                  </div>
+                  <div className="mb-3">
+                    <p htmlFor="exampleInputPassword1" className="form-label">Password</p>
+                    <input
+                      className="form-control"
+                      style={{ borderRadius: '1rem' }}
+                      type="password"
+                      placeholder="Password"
+                      name="password"
+                      value={password}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                    >
+                      Log In
+                    </button>
+                  </div>
                 </form>
-                <div>
-                  <p>Or</p>
-                  <button type="submit" onClick={() => navigate('/signup')}>
+
+                <div className="text-center">
+                  <p className="text-primary pt-3">You do not have an account ? Please</p>
+                  <button
+                    className="btn btn-primary"
+                    type="submit"
+                    onClick={() => navigate('/signup')}
+                  >
                     Sign up
                   </button>
                 </div>
