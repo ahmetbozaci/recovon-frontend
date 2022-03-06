@@ -146,7 +146,10 @@ body {
 .downbtn :hover {
   color: green;
   border-radius: 0.5rem;
-  border: 2px solid wheat;
+}
+
+.docbtn {
+  
 }
 
 .mySlides {

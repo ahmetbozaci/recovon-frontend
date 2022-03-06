@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../app.css';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 // import { Slide } from 'react-slideshow-image';
 
 const Doctor = () => {
@@ -40,7 +42,8 @@ const Doctor = () => {
             />
             <Carousel.Caption>
               <h3>{doc.name}</h3>
-              <p>okok</p>
+              <button className="docbtn" type="button"><Link to="AA" className="createapp"> Create-Appointment </Link></button>
+
             </Carousel.Caption>
           </Carousel.Item>
         ))

@@ -24,7 +24,7 @@ function Logout() {
           <h1>Be HAPPY,</h1>
           <h1> Be HEALTHY</h1>
         </div>
-        <button className="downbtn" type="button"><Link to="/" className="dnav-link"> Start your health experience </Link></button>
+        <button className="downbtn" type="button"><Link to="AA" className="createapp"> Start your health experience </Link></button>
       </div>
     </section>
   );
