@@ -29,14 +29,14 @@ const Doctor = () => {
   }
 
   return (
-    <section>
+    <div className="picside">
       {
         data.map((doc) => (
-          <div className="carousel-inner" key={doc.id}>
+          <div className="carousel-inner picside" key={doc.id}>
             <Carousel>
               <Carousel.Item>
                 <img
-                  className="d"
+                  className="docpicture"
                   src={doc.picture}
                   alt="First slide"
                 />
@@ -46,7 +46,7 @@ const Doctor = () => {
                     {' '}
                     {doc.name}
                   </h3>
-                  <button type="button">Create-appointment</button>
+                  <button classsName="cbtn" type="button">Create-appointment</button>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
@@ -54,7 +54,7 @@ const Doctor = () => {
         ))
       }
 
-    </section>
+    </div>
   );
 };
 export default Doctor;
