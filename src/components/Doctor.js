@@ -34,7 +34,7 @@ const Doctor = () => {
     <Carousel className="caro">
       {
         data.map((doc) => (
-          <Carousel.Item interval={2000} key={doc.id}>
+          <Carousel.Item interval={2000} key={doc.id} className="maincaro">
             <img
               className="docimg"
               src={doc.picture}

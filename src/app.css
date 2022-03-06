@@ -180,8 +180,11 @@ body {
   display: none;
 }
 
-.caro {
-  width: 80%;
+.maincaro {
+  background-image: url(./image/wall2.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .hg {
