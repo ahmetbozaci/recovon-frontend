@@ -110,14 +110,16 @@ body {
 } */
 
 .downbtn {
-  padding: 1px;
-  margin: 1px;
+  border: 1px solid;
+  border-radius: 2rem;
+  margin-top: 12rem;
 }
 
 .dnav-link {
   font-size: 2rem;
   font-weight: bold;
   padding-left: 4rem;
+  text-decoration: none
 
 }
 
@@ -125,6 +127,7 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   padding-left: 4rem;
+  text-decoration: none
 }
 
 .lgbtn {
@@ -148,6 +151,21 @@ body {
 
 .mySlides {
   display: none;
+}
+
+.hg {
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.hg3 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  margin-top: 6rem;
+  color: blue;
 }
 
 .welcomelg {

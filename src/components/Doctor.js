@@ -32,20 +32,17 @@ const Doctor = () => {
     <Carousel>
       {
         data.map((doc) => (
-          <div key={doc.id}>
-            <Carousel.Item interval={1000} key={doc.id}>
-              <img
-                className="d-block w-100"
-                src={doc.picture}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>{doc.name}</h3>
-                <p>okok</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </div>
-
+          <Carousel.Item interval={1000} key={doc.id}>
+            <img
+              className="d-block w-100"
+              src={doc.picture}
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>{doc.name}</h3>
+              <p>okok</p>
+            </Carousel.Caption>
+          </Carousel.Item>
         ))
       }
 
