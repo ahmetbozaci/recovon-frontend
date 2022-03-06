@@ -24,37 +24,32 @@ const Doctor = () => {
   }, []);
   if (data.length === 0) {
     return (
-      <h1>loading</h1>
+      <h3>loading...</h3>
     );
   }
 
   return (
-    <div className="picside">
+    <Carousel>
       {
         data.map((doc) => (
-          <div className="carousel-inner picside" key={doc.id}>
-            <Carousel>
-              <Carousel.Item>
-                <img
-                  className="docpicture"
-                  src={doc.picture}
-                  alt="First slide"
-                />
-                <Carousel.Caption>
-                  <h3 className="docname" style={{ color: 'blue' }}>
-                    Dr .
-                    {' '}
-                    {doc.name}
-                  </h3>
-                  <button classsName="cbtn" type="button">Create-appointment</button>
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
+          <div key={doc.id}>
+            <Carousel.Item interval={1000} key={doc.id}>
+              <img
+                className="d-block w-100"
+                src={doc.picture}
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>{doc.name}</h3>
+                <p>okok</p>
+              </Carousel.Caption>
+            </Carousel.Item>
           </div>
+
         ))
       }
 
-    </div>
+    </Carousel>
   );
 };
 export default Doctor;

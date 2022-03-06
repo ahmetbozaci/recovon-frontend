@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
+  width: 30%;
   height: 100vh;
   top: 0;
   bottom: 0;
@@ -50,8 +50,21 @@ body {
   padding-left: 0rem;
 }
 
-.cbtn {
-  font-weight: bolder;
+.docpicture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border: 2px solid;
+  border-radius: 8rem;
+  margin-top: 5rem;
+
+}
+
+.ccbtn {
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .picside {
@@ -104,14 +117,14 @@ body {
 .dnav-link {
   font-size: 2rem;
   font-weight: bold;
-  padding: 5rem;
+  padding-left: 4rem;
 
 }
 
 .anav-link {
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 5rem;
+  padding-left: 4rem;
 }
 
 .lgbtn {
