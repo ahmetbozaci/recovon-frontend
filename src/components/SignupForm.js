@@ -8,8 +8,7 @@ import createUser from '../Redux/Signup/API';
 import './style/signup.css';
 
 const Signup = () => {
-  const errors = useSelector((state) => state.signupReducer.errors);
-  console.log(errors);
+  const status = useSelector((state) => state.signupReducer.status);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [state, setState] = useState({
@@ -29,7 +28,7 @@ const Signup = () => {
   };
 
   const handleClick = () => {
-    if (errors !== null) {
+    if (status) {
       navigate('/doctor');
     }
   };
@@ -43,6 +42,9 @@ const Signup = () => {
       passwordConfirmation,
     };
     dispatch(createUser(newUser));
+    if (status) {
+      navigate('/doctor');
+    }
   };
 
   return (

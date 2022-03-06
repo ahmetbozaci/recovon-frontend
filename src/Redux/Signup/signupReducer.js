@@ -4,6 +4,7 @@ const CREATE_USER_FAILURE = 'final-capstone-project/users/CREATE_USER_FAILURE';
 const initialState = {
   user: [],
   errors: null,
+  status: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -12,12 +13,12 @@ const reducer = (state = initialState, action) => {
     case CREATE_USER_SUCCESS:
       return {
         user: payload,
+        status: true,
       };
     case CREATE_USER_FAILURE:
       return {
         ...state,
         errors: payload.error,
-        user: [],
       };
     default:
       return state;
