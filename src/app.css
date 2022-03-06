@@ -130,6 +130,13 @@ body {
   text-decoration: none
 }
 
+.createapp {
+  text-decoration: none;
+  font-size: smaller;
+  font-weight: bold;
+  color: rebeccapurple;
+}
+
 .lgbtn {
   border-radius: 12px;
   font-weight: bolder;
@@ -149,11 +156,32 @@ body {
 }
 
 .docbtn {
-  
+  border-radius: 2rem;
+
+}
+
+.docname{
+  font-size: smaller;
+  font-weight: bold;
+  color: rebeccapurple;
+
+}
+
+.docimg {
+  width: 65%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 4rem;
+  margin-left: 7rem;
+  border-radius: 4rem;
 }
 
 .mySlides {
   display: none;
+}
+
+.caro {
+  width: 80%;
 }
 
 .hg {

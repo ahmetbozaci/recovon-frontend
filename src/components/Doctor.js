@@ -31,17 +31,20 @@ const Doctor = () => {
   }
 
   return (
-    <Carousel>
+    <Carousel className="caro">
       {
         data.map((doc) => (
-          <Carousel.Item interval={1000} key={doc.id}>
+          <Carousel.Item interval={2000} key={doc.id}>
             <img
-              className="d-block w-100"
+              className="docimg"
               src={doc.picture}
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>{doc.name}</h3>
+              <h3 className="docname">
+                Dr .
+                {doc.name}
+              </h3>
               <button className="docbtn" type="button"><Link to="AA" className="createapp"> Create-Appointment </Link></button>
 
             </Carousel.Caption>
