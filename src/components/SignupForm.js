@@ -1,13 +1,15 @@
 /** @format */
 
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { createUser } from '../Redux/Signup/API';
+import createUser from '../Redux/Signup/API';
 import './style/signup.css';
 
 const Signup = () => {
+  const errors = useSelector((state) => state.signupReducer.errors);
+  console.log(errors);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [state, setState] = useState({
@@ -15,7 +17,6 @@ const Signup = () => {
     email: '',
     password: '',
     passwordConfirmation: '',
-    errors: '',
   });
 
   const {
@@ -28,8 +29,7 @@ const Signup = () => {
   };
 
   const handleClick = () => {
-    const signup = false;
-    if (signup) {
+    if (errors !== null) {
       navigate('/doctor');
     }
   };

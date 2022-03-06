@@ -1,23 +1,24 @@
-import { createUserAction } from './signupReducer';
+import axios from 'axios';
+import { createUserSuccess, createUserFailure } from './signupReducer';
 
 const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/signup`;
 
-export const addUser = async (user) => {
+const createUser = (user) => async (dispatch) => {
   const newUser = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      name: user.name,
-      email: user.email,
-      password: user.password,
-      password_confirmation: user.passwordConfirmation,
-    }),
+    name: user.name,
+    email: user.email,
+    password: user.password,
+    password_confirmation: user.passwordConfirmation,
   };
-  const response = await fetch(baseURL, newUser);
-  return response;
+
+  const response = await axios.post(baseURL, newUser);
+  const { data } = response;
+  const { status, errors } = data;
+  if (status !== 'error') {
+    dispatch(createUserSuccess(data));
+  } else {
+    dispatch(createUserFailure(errors));
+  }
 };
 
-export const createUser = (user) => async (dispatch) => {
-  addUser(user);
-  dispatch(createUserAction(user));
-};
+export default createUser;
