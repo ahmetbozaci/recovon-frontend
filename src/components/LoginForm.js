@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { logInUser } from '../Redux/logIn/logInActions';
+import '../assets/style/login.css';
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -40,13 +41,13 @@ const LoginForm = () => {
   };
 
   return (
-    <section className="vh-100" style={{ backgroundColor: '#1266f1' }}>
+    <section className="vh-100" style={{ backgroundColor: 'white' }}>
       <div className="container py-3 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12 col-md-8 col-lg-6 col-xl-5">
             <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
-              <div className="card-body p-5">
-                <h3 className="mb-5 text-center">Sign in</h3>
+              <div className="card-body p-5 signIn" style={{ backgroundColor: 'rgb(127, 214, 255)' }}>
+                <h1 className="mb-5 text-center">Sign in</h1>
 
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
@@ -86,14 +87,18 @@ const LoginForm = () => {
                 </form>
 
                 <div className="text-center">
-                  <p className="text-primary pt-3">You do not have an account ? Please</p>
-                  <button
-                    className="btn btn-primary"
-                    type="submit"
-                    onClick={() => navigate('/signup')}
-                  >
-                    Sign up
-                  </button>
+                  <div className="text-secondary pt-3 signIn-text">
+                    You do not have an account ? Please
+                    {' '}
+                    { ' ' }
+                    <Link
+                      to="/signup"
+                      className="text-primary"
+                      type="submit"
+                    >
+                      Sign up
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
