@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logInUser } from '../Redux/logIn/logInActions';
 
@@ -7,14 +7,13 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const reduxState = useSelector((state) => state.logInReducer);
-  // console.log('redux state', reduxState);
+  // const reduxState = useSelector((state) => state.logInReducer);
 
-  useEffect(() => {
-    if (reduxState.loggedOut === false) {
-      navigate('/doctor');
-    }
-  }, [reduxState]);
+  // useEffect(() => {
+  //   if (reduxState.loggedOut === false) {
+  //     navigate('/doctor');
+  //   }
+  // }, [reduxState]);
 
   const [state, setState] = useState({
     email: '',
@@ -79,6 +78,7 @@ const LoginForm = () => {
                     <button
                       type="submit"
                       className="btn btn-primary"
+                      onClick={() => navigate('/doctor')}
                     >
                       Log In
                     </button>

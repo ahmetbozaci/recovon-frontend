@@ -9,7 +9,8 @@ import NavBar from './NavBar';
 import NotMatch from './NotMatch';
 import SignupForm from './SignupForm';
 import LogoutPage from './LogoutPage';
+import LogIn from './LogIn';
 
 export {
-  Appointment, Doctor, DoctorId, Footer, LoginForm, MyAppointment, NavBar, NotMatch, SignupForm, LogoutPage,
+  Appointment, Doctor, DoctorId, Footer, LoginForm, MyAppointment, NavBar, NotMatch, SignupForm, LogoutPage, LogIn,
 };
