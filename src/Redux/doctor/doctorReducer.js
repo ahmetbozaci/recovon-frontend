@@ -10,7 +10,7 @@ const doctorReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DOCTORS_SUCCESS:
       return {
-        doctors: action.payload,
+        doctors: [...action.payload],
       };
     default: return state;
   }

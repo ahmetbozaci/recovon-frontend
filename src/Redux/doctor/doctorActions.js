@@ -8,7 +8,7 @@ const fetchDoctorsSuccess = (doctors) => ({
 });
 
 const fetchDoctors = () => (dispatch) => {
-  axios.get('http://localhost:3000/doctors')
+  axios.get('https://final-api-55.herokuapp.com/doctors')
     .then((response) => {
       // response.data is the array of DOCTORS
       const doctors = response.data;
