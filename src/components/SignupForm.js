@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -20,6 +20,12 @@ const Signup = () => {
   const {
     name, email, password, passwordConfirmation,
   } = state;
+
+  useEffect(() => {
+    if (status) {
+      navigate('/doctor');
+    }
+  });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
