@@ -40,7 +40,7 @@ const Doctor = () => {
               src={doc.picture}
               alt="First slide"
             />
-            <Carousel.Caption>
+            <Carousel.Caption className="caption">
               <h3 className="docname">
                 Dr .
                 {doc.name}

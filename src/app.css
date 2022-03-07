@@ -162,6 +162,7 @@ body {
 
 .docbtn {
   border-radius: 2rem;
+  margin-bottom: 5rem;
 
 }
 
@@ -173,11 +174,11 @@ body {
 }
 
 .docimg {
-  width: 66%;
+  width: 43%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-top: 1.5rem;
-  margin-left: 11rem;
+  margin-top: 2.5rem;
+  margin-left: 17rem;
   border-radius: 4rem;
 }
 
@@ -185,10 +186,22 @@ body {
   display: none;
 }
 
+.caption {
+  position: absolute;
+  right: 15%;
+  bottom: 5.25rem;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+
 .maincaro {
   background-image: url(./image/wall2.avif);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .Navigation1 .navbar-nav {
@@ -228,4 +241,11 @@ body {
   background-size: cover;
   height: 100%;
   width: 75%;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
 }
