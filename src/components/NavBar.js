@@ -11,7 +11,6 @@ const NavBar = () => (
       <li className="logo">
         <img className="imgg" src={logoa} alt="logo" />
       </li>
-
       <li><Link to="/" className="dnav-link"> Doctors </Link></li>
       <li><Link to="/myappointments" className="anav-link">Appointments</Link></li>
     </ul>
