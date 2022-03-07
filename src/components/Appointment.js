@@ -3,16 +3,15 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
-import { createAppointment } from '../Redux/Appointment/API';
+import createAppointment from '../Redux/Appointment/API';
 
 const Appointment = () => {
   const dispatch = useDispatch();
   const [state, setState] = useState({
     date: '',
     time: '',
-    userID: 1,
-    doctorID: 1,
-    errors: '',
+    userID: 1, // current_user
+    doctorID: 1, // state
   });
 
   const {
@@ -54,17 +53,14 @@ const Appointment = () => {
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control
           type="time"
-          step=""
-          min="09:00"
-          max="17:00"
           onChange={handleChange}
           value={time}
           name="time"
           required
         />
-        <Form.Text className="text-muted">
+        {/* <Form.Text className="text-muted">
           Choose time 09:00 AM to 05:00 PM
-        </Form.Text>
+        </Form.Text> */}
       </Form.Group>
       {/* Doctor name will come from state */}
       <Form.Group className="mb-3" controlId="formBasicEmail">
