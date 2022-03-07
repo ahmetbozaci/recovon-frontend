@@ -49,7 +49,7 @@ body {
   align-items: center;
   padding-top: 3rem;
   gap: 1rem;
-  padding-left: 0rem;
+  padding-left: 0;
 }
 
 .docpicture {
@@ -60,7 +60,6 @@ body {
   border: 2px solid;
   border-radius: 8rem;
   margin-top: 5rem;
-
 }
 
 .ccbtn {
@@ -68,12 +67,6 @@ body {
   font-weight: bold;
   font-size: 25px;
 }
-
-.picside {
-  font: l;
-}
-
-.docname {}
 
 .mainlogout {
   /* position: fixed; */
@@ -113,7 +106,6 @@ body {
 } */
 
 .downbtn {
-  order: 1px solid;
   border-radius: 2rem;
   margin-top: 10rem;
   display: flex;
@@ -124,15 +116,14 @@ body {
   font-size: 2rem;
   font-weight: bold;
   padding-left: 4rem;
-  text-decoration: none
-
+  text-decoration: none;
 }
 
 .anav-link {
   font-size: 1.5rem;
   font-weight: bold;
   padding-left: 4rem;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .createapp {
@@ -163,14 +154,12 @@ body {
 .docbtn {
   border-radius: 2rem;
   margin-bottom: 5rem;
-
 }
 
-.docname{
+.docname {
   font-size: smaller;
   font-weight: bold;
   color: rebeccapurple;
-
 }
 
 .docimg {
