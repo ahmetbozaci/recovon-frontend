@@ -7,7 +7,7 @@ import logoa from '../image/logo.jpg';
 
 const NavBar = () => (
   <div className="Navigation1">
-    <ul className="navbar-nav mr-auto">
+    <ul className="navbar-nav">
       <li className="logo">
         <img className="imgg" src={logoa} alt="logo" />
       </li>
