@@ -21,14 +21,14 @@ body {
   margin: 1rem;
 }
 
-/* .App {
+.App {
   width: 100%;
   position: absolute;
   font-size: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-} */
+}
 
 .iconss {
   list-style: none;
