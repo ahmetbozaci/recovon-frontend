@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm, NavBar, LogoutPage,
 } from './components/Index';
-// import UserContainer from './components/UserContainer';
 
 const SidebarLayout = () => (
   <>
