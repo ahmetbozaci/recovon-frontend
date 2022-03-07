@@ -1,5 +1,4 @@
-/** @format */
-
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
@@ -27,13 +26,7 @@ const Signup = () => {
     setState({ ...state, [name]: value });
   };
 
-  const handleClick = () => {
-    if (status) {
-      navigate('/doctor');
-    }
-  };
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const newUser = {
       name,
@@ -42,9 +35,6 @@ const Signup = () => {
       passwordConfirmation,
     };
     dispatch(createUser(newUser));
-    if (status) {
-      navigate('/doctor');
-    }
   };
 
   return (
@@ -99,7 +89,7 @@ const Signup = () => {
         />
       </Form.Group>
       <div className="d-grid gap-2 mt-3">
-        <Button variant="primary" size="lg" type="submit" onClick={handleClick}>
+        <Button variant="primary" size="lg" type="submit">
           Sign Up
         </Button>
       </div>
