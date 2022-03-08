@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const FETCH_DOCTORS_SUCCESS = 'FETCH_DOCTORS_SUCCESS';
 
-const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/doctors`;
+const baseURL = 'https://final-api-55.herokuapp.com/doctors';
 
 const fetchDoctorsSuccess = (doctors) => ({
   type: FETCH_DOCTORS_SUCCESS,
