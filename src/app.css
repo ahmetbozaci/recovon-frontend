@@ -125,12 +125,12 @@ body {
   text-decoration: none;
 }
 
-.createapp {
+/* .createapp {
   text-decoration: none;
   font-size: smaller;
   font-weight: bold;
   color: rebeccapurple;
-}
+} */
 
 .lgbtn {
   border-radius: 12px;
@@ -149,13 +149,13 @@ body {
   color: green;
   border-radius: 0.5rem;
 }
-
+/* 
 .docbtn {
   border-radius: 2rem;
   margin-bottom: 5rem;
-}
+} */
 
-.docname {
+/* .docname {
   font-size: smaller;
   font-weight: bold;
   color: rebeccapurple;
@@ -168,13 +168,13 @@ body {
   margin-top: 2.5rem;
   margin-left: 17rem;
   border-radius: 4rem;
-}
+} */
 
 .mySlides {
   display: none;
 }
 
-.caption {
+/* .caption {
   position: absolute;
   right: 15%;
   bottom: 5.25rem;
@@ -183,14 +183,14 @@ body {
   padding-bottom: 1.25rem;
   color: #fff;
   text-align: center;
-}
+} */
 
-.maincaro {
+/* .maincaro {
   background-image: url("../src/assets/images/wall2.avif");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-}
+} */
 
 .Navigation1 .navbar-nav {
   display: flex;
@@ -200,9 +200,9 @@ body {
   list-style: none;
 }
 
-.caro {
+/* .caro {
   width: 75%;
-}
+} */
 
 .hg {
   margin-top: 1.5rem;
@@ -222,14 +222,14 @@ body {
   font-weight: bolder;
 }
 
-.welcomelg {
+/* .welcomelg {
   background-image: url("./assets/images/first-page.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100%;
   width: 75%;
-}
+} */
 
 .carousel-inner {
   position: relative;
