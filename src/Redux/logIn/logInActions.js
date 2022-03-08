@@ -1,8 +1,7 @@
 export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS';
 export const LOGOUT_USER_SUCCESS = 'LOGOUT_USER_SUCCESS';
 
-const baseURL = 'http://127.0.0.1:3000/login';
-const logoutURL = 'http://127.0.0.1:3000/logout';
+const baseURL = process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL;
 
 const logInUserSuccess = (users) => ({
   type: LOGIN_USER_SUCCESS,
@@ -23,9 +22,8 @@ export const signInUser = async (user) => {
       password: user.password,
     }),
   };
-  const response = await fetch(baseURL, exUser);
+  const response = await fetch(`${baseURL}/login`, exUser);
   const data = await response.json();
-  // console.log('data', data);
   localStorage.setItem('token', JSON.stringify(data.jwt));
   localStorage.setItem('ANYNAME', JSON.stringify(data.logged_out));
   return data;
@@ -44,16 +42,14 @@ export const quitUser = async () => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
   };
-  const response = await fetch(logoutURL, currUser);
+  const response = await fetch(`${baseURL}/logout`, currUser);
   const data = await response.json();
   localStorage.setItem('ANYNAME', JSON.stringify(data.logged_out));
-  // console.log('logout data', data);
   return data;
 };
 
 export const logOutUser = () => async (dispatch) => {
   const xyz = await quitUser();
-  // console.log('xyz', xyz);
   const logOutDetails = {
     loggedOut: xyz.logged_out,
   };
