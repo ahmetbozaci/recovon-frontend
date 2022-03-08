@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import createUser from '../Redux/Signup/API';
-import './style/signup/style.css';
+import './style/signup.css';
 
 const Signup = () => {
   const status = useSelector((state) => state.signupReducer.status);
