@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import Appointment from './Appointment';
 import Doctor from './Doctor';
 import Footer from './Footer';
@@ -10,5 +9,13 @@ import SignupForm from './SignupForm';
 import LogoutPage from './LogoutPage';
 
 export {
-  Appointment, Doctor, Footer, LoginForm, MyAppointment, NavBar, NotMatch, SignupForm, LogoutPage,
+  Appointment,
+  Doctor,
+  Footer,
+  LoginForm,
+  MyAppointment,
+  NavBar,
+  NotMatch,
+  SignupForm,
+  LogoutPage,
 };
