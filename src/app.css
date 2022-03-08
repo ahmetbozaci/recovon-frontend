@@ -1,6 +1,8 @@
+/* @import "react-slideshow-image/dist/styles.css"; */
 body {
-  display: block;
-  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .Navigation1 {
@@ -21,21 +23,49 @@ body {
   margin: 1rem;
 }
 
+.imgg {
+  width: 26%;
+  margin: 1rem;
+  align-self: center;
+  margin-left: 6rem;
+  padding-bottom: 5rem;
+  border-radius: 2rem;
+}
+
 /* .App {
   width: 100%;
-  position: absolute;
+  height: 100vh;
   font-size: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
 } */
 
+
 .iconss {
   list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 3rem;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.docpicture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border: 2px solid;
+  border-radius: 8rem;
+  margin-top: 5rem;
+}
+
+.ccbtn {
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .mainlogout {
@@ -47,6 +77,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  width: 100%;
 }
 
 .lls {
@@ -75,14 +106,121 @@ body {
 } */
 
 .downbtn {
-  padding: 1px;
-  margin: 1px;
+  border-radius: 2rem;
+  margin-top: 10rem;
+  display: flex;
+  margin-left: 16rem;
+}
+
+.dnav-link {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 4rem;
+  text-decoration: none;
+}
+
+.anav-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 4rem;
+  text-decoration: none;
+}
+
+.createapp {
+  text-decoration: none;
+  font-size: smaller;
+  font-weight: bold;
+  color: rebeccapurple;
+}
+
+.lgbtn {
+  border-radius: 12px;
+  font-weight: bolder;
+  margin-top: 6rem;
+  font-size: 1rem;
+}
+
+.lgbtn :hover {
+  color: rgb(94, 255, 0);
+  border: 2px solid blue;
+  background-color: red;
 }
 
 .downbtn :hover {
   color: green;
   border-radius: 0.5rem;
-  border: 2px solid wheat;
+}
+
+.docbtn {
+  border-radius: 2rem;
+  margin-bottom: 5rem;
+}
+
+.docname {
+  font-size: smaller;
+  font-weight: bold;
+  color: rebeccapurple;
+}
+
+.docimg {
+  width: 43%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 2.5rem;
+  margin-left: 17rem;
+  border-radius: 4rem;
+}
+
+.mySlides {
+  display: none;
+}
+
+.caption {
+  position: absolute;
+  right: 15%;
+  bottom: 5.25rem;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+
+.maincaro {
+  background-image: url(./image/wall2.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.Navigation1 .navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.caro {
+  width: 75%;
+}
+
+.hg {
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+  color: mediumspringgreen;
+}
+
+.hg3 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  margin-top: 6rem;
+  color: rgb(92, 3, 80);
+  font-weight: bolder;
 }
 
 .welcomelg {
@@ -91,4 +229,12 @@ body {
   background-position: center;
   background-size: cover;
   height: 100%;
+  width: 75%;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
 }
