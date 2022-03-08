@@ -23,30 +23,28 @@ const Doctor = () => {
   }
 
   return (
-    <div>
-      <Carousel className="caro">
-        {
-          doctors.map((doc) => (
-            <Carousel.Item interval={2000} key={doc.id} className="maincaro">
-              <img
-                className="docimg"
-                src={doc.picture}
-                alt="First slide"
-              />
-              <Carousel.Caption className="caption">
-                <h3 className="docname">
-                  Dr .
-                  {doc.name}
-                </h3>
-                <button className="docbtn" type="button"><Link to="AA" className="createapp"> Create-Appointment </Link></button>
+    <Carousel className="caro">
+      {
+        doctors.map((doc) => (
+          <Carousel.Item interval={2000} key={doc.id} className="maincaro">
+            <img
+              className="docimg"
+              src={doc.picture}
+              alt="First slide"
+            />
+            <Carousel.Caption className="caption">
+              <h3 className="docname">
+                Dr .
+                {doc.name}
+              </h3>
+              <button className="docbtn" type="button"><Link to="AA" className="createapp"> Create-Appointment </Link></button>
 
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))
-        }
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))
+      }
 
-      </Carousel>
-    </div>
+    </Carousel>
   );
 };
 export default Doctor;
