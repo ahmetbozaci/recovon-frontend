@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
@@ -44,7 +43,7 @@ const Signup = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="form m-auto mt-5">
+    <Form onSubmit={handleSubmit} className="form m-auto mt-5 signup-form">
       <h1 className="text-center">Sign Up</h1>
       <Form.Group className="mb-2" controlId="formBasicUsername">
         <Form.Label>

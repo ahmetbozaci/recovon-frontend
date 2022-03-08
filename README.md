@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# DOCTOR APPOINTMENT 
+<!-- Add screenshot, add description of website etc-->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app consumes an API created using the Ruby on Rails framework. 
+Backend Repo link: 
 
-## Available Scripts
 
-In the project directory, you  run:
+## Built With
 
-### `npm start`
+- React
+- Redux
+- React-Bootstrap
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[]()
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
+- Clone this project
+```
+- $ git clone `$ https://github.com/ahmetbozaci/`
+- $ cd 
+```
+- Install npm packages
+```
+- $ npm install
+```
+- Open website
+```
+- $ npm start
+```
+## Authors
 
-### `npm run build`
+👤 **Ali Abbani**
+- [GitHub](https://github.com/aliabbani)
+- [AngelList](https://angel.co/u/ali-abbani)
+- [LinkedIn](https://www.linkedin.com/in/ali-abbani-8b6246150/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+👤 **Ahmet Bozacı**
+- [Github](https://github.com/ahmetbozaci)
+- [Twitter](https://twitter.com/ahmtbozaci)
+- [LinkedIn](https://www.linkedin.com/in/ahmetbozaci/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👤 **Tufoin Nkuo**
+- [GitHub](https://github.com/tufoinnkuo10)
+- [Twitter](https://twitter.com/itztenten)
+- [LinkedIn](https://www.linkedin.com/in/tufoin-nkuo-3b272320b)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 🤝 Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions, issues, and feature requests are welcome!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to check the [issues page](../../issues/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Show your support
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Give a ⭐️ if you like this project!
 
-## Learn More
+## 📝 License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* This project is [MIT](./LICENSE) licensed.
+* [Creative Common License of design](https://creativecommons.org/licenses/by-nc/4.0/)
+* Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
