@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../app.css';
-import logoa from '../image/logo.jpg';
+import logo from '../assets/images/logo.jpg';
 
 function Logout() {
   return (
@@ -9,7 +9,7 @@ function Logout() {
       <div className="Navigation1">
         <ul className="navbar-nav mr-auto">
           <li className="logo">
-            <img className="imgg" src={logoa} alt="logo" />
+            <img className="imgg" src={logo} alt="logo" />
           </li>
           <li><Link to="login" className="dnav-link"> login </Link></li>
           <li><Link to="signup" className="anav-link">signup</Link></li>

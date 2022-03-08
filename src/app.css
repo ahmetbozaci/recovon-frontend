@@ -186,7 +186,7 @@ body {
 }
 
 .maincaro {
-  background-image: url(./image/wall2.avif);
+  background-image: url("../src/assets/images/wall2.avif");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -223,7 +223,7 @@ body {
 }
 
 .welcomelg {
-  background-image: url("doc.png");
+  background-image: url("/src/assets/images/doc.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
