@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import createUser from '../Redux/Signup/API';
-import './style/signup.css';
+import '../assets/style/signup.css';
 
 const Signup = () => {
   const status = useSelector((state) => state.signupReducer.status);

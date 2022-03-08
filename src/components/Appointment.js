@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import createAppointment from '../Redux/Appointment/API';
-import './style/appointment.css';
+import '../assets/style/appointment.css';
 
 const Appointment = () => {
   const dispatch = useDispatch();
