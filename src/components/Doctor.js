@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 
 // import axios from 'axios';
 import '../app.css';
-import { Carousel, Modal, Button } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { render } from '@testing-library/react';
+// import { render } from '@testing-library/react';
 // import fetchDoctors from '../Redux/doctor/doctorActions';
 
 // import { Slide } from 'react-slideshow-image';
@@ -49,29 +49,3 @@ const Doctor = () => {
   );
 };
 export default Doctor;
-
-function Example() {
-  const [smShow, setSmShow] = useState(false);
-
-  return (
-    <>
-      <Button onClick={() => setSmShow(true)}>Small modal</Button>
-      <Modal
-        size="sm"
-        show={smShow}
-        onHide={() => setSmShow(false)}
-        aria-labelledby="example-modal-sizes-title-sm"
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-sm">
-            Small Modal
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>...</Modal.Body>
-      </Modal>
-    </>
-  );
-
-}
-
-render(<Example />);

@@ -26,12 +26,12 @@ function App() {
 
         <Routes>
           <Route element={<SidebarLayout />}>
-            <Route path="/" element={<SignupForm />} />
             <Route path="doctors" element={<Doctor />} />
             <Route path="myappointments" element={<MyAppointment />} />
             <Route path="*" element={<NotMatch />} />
           </Route>
-          <Route path="logoutpage" element={<LogoutPage />} />
+          <Route path="/" element={<LogoutPage />} />
+          <Route path="signup" element={<SignupForm />} />
           <Route path="appointment" element={<Appointment />} />
           <Route path="login" element={<LoginForm />} />
         </Routes>
