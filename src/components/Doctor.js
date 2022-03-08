@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
-
-import '../app.css';
+import '../assets/style/doctor.css';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
