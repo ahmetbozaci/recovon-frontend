@@ -49,7 +49,7 @@ const MyAppointment = () => {
                           <p className="card-text" style={{ fontSize: '1.5rem' }}>
                             Reservation Time:
                             {' '}
-                            <Moment format="HH-MM" className="text-muted">{d.time}</Moment>
+                            <Moment format="HH:MM" className="text-muted">{d.time}</Moment>
                           </p>
                         </div>
                       </div>
