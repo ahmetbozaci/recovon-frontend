@@ -1,8 +1,13 @@
 .signup-form {
+  background-color: rgb(127, 214, 255);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   border: 1px solid white;
   border-radius: 1rem;
-  padding: 1.5rem 3.7rem;
-  background-color: rgb(127, 214, 255);
 }
 
 .signin-text {
