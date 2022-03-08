@@ -8,7 +8,7 @@ import { fetchMyApp } from '../Redux/MyApp/myAppActions';
 const MyAppointment = () => {
   const myAppData = useSelector((state) => state.myAppReducer.myApp);
   // const doctorData = useSelector((state) => state.doctorReducer.doctors);
-  // console.log('doctor data inside appointments', doctorData);
+  // console.log('doctor data inside appointment', doctorData);
   // const doctorId = doctorData.map((d) => d.id);
   // console.log('all doctors id', doctorId);
 
