@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -21,6 +20,12 @@ const Signup = () => {
     name, email, password, passwordConfirmation,
   } = state;
 
+  useEffect(() => {
+    if (status) {
+      navigate('/doctor');
+    }
+  });
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setState({ ...state, [name]: value });
@@ -38,7 +43,7 @@ const Signup = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="form m-auto mt-5">
+    <Form onSubmit={handleSubmit} className="form m-auto mt-5 signup-form">
       <h1 className="text-center">Sign Up</h1>
       <Form.Group className="mb-2" controlId="formBasicUsername">
         <Form.Label>

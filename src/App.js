@@ -22,8 +22,6 @@ function App() {
     <Provider store={store}>
       <div className="App">
 
-        {/* <UserContainer /> */}
-
         <Routes>
           <Route element={<SidebarLayout />}>
             <Route path="doctors" element={<Doctor />} />
