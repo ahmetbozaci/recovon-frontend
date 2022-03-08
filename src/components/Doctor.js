@@ -1,25 +1,16 @@
-/* eslint-disable max-len */
-// import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-// import axios from 'axios';
 import '../app.css';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// import { render } from '@testing-library/react';
-// import fetchDoctors from '../Redux/doctor/doctorActions';
-
-// import { Slide } from 'react-slideshow-image';
 
 const Doctor = () => {
   const doctor = useSelector((state) => state.doctorReducer);
   const { doctors } = doctor;
-  // const dispatch = useDispatch();
-  console.log(doctor);
 
   if (doctors.length === 0) {
     return (
-      <h3>loading....</h3>
+      <h3>....</h3>
     );
   }
 
