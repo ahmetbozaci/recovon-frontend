@@ -3,7 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import store from './Redux/store';
-import './app.css';
+// import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
