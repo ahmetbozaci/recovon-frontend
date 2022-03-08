@@ -37,7 +37,7 @@ const Doctor = () => {
                 Dr .
                 {doc.name}
               </h3>
-              <button className="docbtn" type="button"><Link to="AA" className="createapp"> Create-Appointment </Link></button>
+              <button className="docbtn" type="button"><Link to="/appointment" className="createapp"> Create-Appointment </Link></button>
 
             </Carousel.Caption>
           </Carousel.Item>

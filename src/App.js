@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route element={<SidebarLayout />}>
             <Route path="/" element={<SignupForm />} />
-            <Route path="doctors" element={<Doctor />} />
+            <Route path="doctors" element={<Doctor doctorid=''/>} />
             <Route path="appointments" element={<Appointment />} />
             <Route path="myappointments" element={<MyAppointment />} />
             <Route path="appointment" element={<Appointment />} />
