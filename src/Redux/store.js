@@ -3,10 +3,12 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './rootReducer';
+import fetchDoctors from './doctor/doctorActions';
 
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(logger, thunk)),
 );
+store.dispatch(fetchDoctors());
 
 export default store;

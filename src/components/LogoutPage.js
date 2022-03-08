@@ -11,8 +11,8 @@ function Logout() {
           <li className="logo">
             <img className="imgg" src={logoa} alt="logo" />
           </li>
-          <li><Link to="/" className="dnav-link"> login </Link></li>
-          <li><Link to="/myappointments" className="anav-link">signup</Link></li>
+          <li><Link to="login" className="dnav-link"> login </Link></li>
+          <li><Link to="signup" className="anav-link">signup</Link></li>
         </ul>
       </div>
 
@@ -24,7 +24,7 @@ function Logout() {
           <h1>Be HAPPY,</h1>
           <h1> Be HEALTHY</h1>
         </div>
-        <button className="downbtn" type="button"><Link to="AA" className="createapp"> Start your health experience </Link></button>
+        <button className="downbtn" type="button"><Link to="signup" className="createapp"> Start your health experience </Link></button>
       </div>
     </section>
   );
