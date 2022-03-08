@@ -2,15 +2,16 @@ import axios from 'axios';
 
 export const FETCH_DOCTORS_SUCCESS = 'FETCH_DOCTORS_SUCCESS';
 
+const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/doctors`;
+
 const fetchDoctorsSuccess = (doctors) => ({
   type: FETCH_DOCTORS_SUCCESS,
   payload: doctors,
 });
 
 const fetchDoctors = () => (dispatch) => {
-  axios.get('https://final-api-55.herokuapp.com/doctors')
+  axios.get(baseURL)
     .then((response) => {
-      // response.data is the array of DOCTORS
       const doctors = response.data;
       dispatch(fetchDoctorsSuccess(doctors));
     });
