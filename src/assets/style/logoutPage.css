@@ -9,3 +9,14 @@
   width: 75%;
 }
 
+.mainlogout {
+  /* position: fixed; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
