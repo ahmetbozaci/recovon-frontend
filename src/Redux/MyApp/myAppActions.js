@@ -5,8 +5,6 @@ export const FETCH_MY_APP_SUCCESS = 'FETCH_MY_APP_SUCCESS';
 export const FETCH_MY_APP_FAILURE = 'FETCH_MY_APP_FAILURE';
 export const DELETE_MY_APP_SUCCESS = 'FETCH_MY_APP_FAILURE';
 
-const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/appointments`;
-
 const fetchMyAppRequest = () => ({
   type: FETCH_MY_APP_REQUEST,
 });
@@ -27,7 +25,7 @@ export const deleteMyAppSuccess = (myapp) => ({
 });
 
 export const deleteAppointment = (id) => async (dispatch) => {
-  await fetch(`{baseURL}/${id}`, {
+  await fetch(`https://final-api-55.herokuapp.com/appointments/${id}`, {
     method: 'DELETE',
   });
   dispatch(deleteMyAppSuccess(id));
@@ -35,7 +33,7 @@ export const deleteAppointment = (id) => async (dispatch) => {
 
 export const fetchMyApp = () => (dispatch) => {
   dispatch(fetchMyAppRequest());
-  axios.get(baseURL)
+  axios.get('https://final-api-55.herokuapp.com/appointments')
     .then((response) => {
       const myApp = response.data;
       dispatch(fetchMyAppSuccess(myApp));

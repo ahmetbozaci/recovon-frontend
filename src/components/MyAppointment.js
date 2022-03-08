@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Moment from 'react-moment';
 import 'moment-timezone';
-import { fetchMyApp } from '../Redux/MyAppointment/myAppointmentActions';
+import { fetchMyApp } from '../Redux/MyApp/myAppActions';
 // import fetchDoctor from '../Redux/Doctor/doctorActions';
 
 const MyAppointment = () => {

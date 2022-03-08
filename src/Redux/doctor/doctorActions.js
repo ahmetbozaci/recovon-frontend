@@ -10,6 +10,7 @@ const fetchDoctorsSuccess = (doctors) => ({
 });
 
 const fetchDoctors = () => (dispatch) => {
+  console.log(baseURL);
   axios.get(baseURL)
     .then((response) => {
       const doctors = response.data;

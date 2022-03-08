@@ -3,7 +3,7 @@ import {
   FETCH_MY_APP_SUCCESS,
   FETCH_MY_APP_FAILURE,
   DELETE_MY_APP_SUCCESS,
-} from './myAppointmentActions';
+} from './myAppActions';
 
 const initialState = {
   loading: false,
