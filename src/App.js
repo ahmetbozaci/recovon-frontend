@@ -27,14 +27,13 @@ function App() {
         <Routes>
           <Route element={<SidebarLayout />}>
             <Route path="/" element={<SignupForm />} />
-            <Route path="doctors" element={<Doctor doctorid=''/>} />
-            <Route path="appointments" element={<Appointment />} />
+            <Route path="doctors" element={<Doctor />} />
             <Route path="myappointments" element={<MyAppointment />} />
-            <Route path="appointment" element={<Appointment />} />
             <Route path="*" element={<NotMatch />} />
-            <Route path="login" element={<LoginForm />} />
           </Route>
           <Route path="logoutpage" element={<LogoutPage />} />
+          <Route path="appointment" element={<Appointment />} />
+          <Route path="login" element={<LoginForm />} />
         </Routes>
       </div>
     </Provider>
