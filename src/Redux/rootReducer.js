@@ -7,7 +7,6 @@ import doctorReducer from './doctor/doctorReducer';
 
 import myAppReducer from './MyApp/myAppReducer';
 
-
 const rootReducer = combineReducers({
   signupReducer,
   logInReducer,
