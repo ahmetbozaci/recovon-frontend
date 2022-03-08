@@ -223,7 +223,7 @@ body {
 }
 
 .welcomelg {
-  background-image: url("/src/assets/images/doc.png");
+  background-image: url("./assets/images/first-page.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
