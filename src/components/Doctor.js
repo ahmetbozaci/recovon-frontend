@@ -1,36 +1,52 @@
 /* eslint-disable max-len */
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+// import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 // import axios from 'axios';
 import '../app.css';
 import { Carousel } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import fetchDoctors from '../Redux/doctor/doctorActions';
 
 // import { Slide } from 'react-slideshow-image';
 
 const Doctor = () => {
   const doctor = useSelector((state) => state.doctorReducer);
-  const dispatch = useDispatch();
+  const { doctors } = doctor;
+  // const dispatch = useDispatch();
   console.log(doctor);
 
-  if (doctor.length === 0) {
+  if (doctors.length === 0) {
     return (
       <h3>loading....</h3>
     );
   }
 
   return (
-    {
-     doctors.map((doc)=>{
-       return(
-         <div key={doc.id}>
-         </div>
-       )
-     })
-    }
+    <div>
+      <Carousel className="caro">
+        {
+          doctors.map((doc) => (
+            <Carousel.Item interval={2000} key={doc.id} className="maincaro">
+              <img
+                className="docimg"
+                src={doc.picture}
+                alt="First slide"
+              />
+              <Carousel.Caption className="caption">
+                <h3 className="docname">
+                  Dr .
+                  {doc.name}
+                </h3>
+                <button className="docbtn" type="button"><Link to="AA" className="createapp"> Create-Appointment </Link></button>
 
-  )
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))
+        }
+
+      </Carousel>
+    </div>
+  );
 };
 export default Doctor;
