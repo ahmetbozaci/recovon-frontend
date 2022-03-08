@@ -1,12 +1,12 @@
 import {
   FETCH_DOCTOR_SUCCESS,
-} from './doctorActions';
+} from './doctorInfoActions';
 
 const initialState = {
   doctors: [],
 };
 
-const doctorReducer = (state = initialState, action) => {
+const doctorInfoReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DOCTOR_SUCCESS:
       return {
@@ -17,4 +17,4 @@ const doctorReducer = (state = initialState, action) => {
   }
 };
 
-export default doctorReducer;
+export default doctorInfoReducer;
