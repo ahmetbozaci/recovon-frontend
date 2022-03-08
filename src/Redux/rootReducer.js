@@ -3,7 +3,7 @@ import signupReducer from './Signup/signupReducer';
 import logInReducer from './logIn/logInReducer';
 import appointmentReducer from './Appointment/appointmentReducer';
 import doctorReducer from './doctor/doctorReducer';
-import myAppReducer from './MyApp/myAppReducer';
+import myAppReducer from './MyAppointment/myAppointmentReducer';
 
 const rootReducer = combineReducers({
   signupReducer,
