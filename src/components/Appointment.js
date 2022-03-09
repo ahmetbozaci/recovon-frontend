@@ -36,7 +36,7 @@ const Appointment = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form className="form-appointment" onSubmit={handleSubmit}>
       <br />
       <br />
       {/* Disable weekends */}
