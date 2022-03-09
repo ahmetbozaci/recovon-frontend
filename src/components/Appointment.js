@@ -7,6 +7,9 @@ import '../assets/style/appointment.css';
 const Appointment = () => {
   const dispatch = useDispatch();
   const oneDoctor = useSelector((state) => state.doctorReducer.oneDoctor);
+  // console.log('doctor name', oneDoctor[0].name);
+  // useEffect(() => oneDoctor[0].name);
+
   const [state, setState] = useState({
     date: '',
     time: '',
@@ -40,6 +43,12 @@ const Appointment = () => {
       <br />
       {/* Disable weekends */}
       <h2 className="pb-3">Fill the form to create your appointment</h2>
+      <div>
+        {oneDoctor
+                && oneDoctor.map((d) => (
+                  <h4 key={d.id}>{d.name}</h4>
+                ))}
+      </div>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control
           type="date"
@@ -63,9 +72,9 @@ const Appointment = () => {
         </Form.Text> */}
       </Form.Group>
       {/* Doctor name will come from state */}
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      {/* <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control type="text" disabled value="Doctor name" />
-      </Form.Group>
+      </Form.Group> */}
       <Button variant="primary" type="submit">
         Create Appointment
       </Button>
