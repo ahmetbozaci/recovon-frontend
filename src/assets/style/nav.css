@@ -1,12 +1,16 @@
-/* body {
-  padding-top: 90px;
-} */
+body {
+  padding-top: 56px;
+}
+
+.nav-mobile {
+  display: flex;
+}
 
 @media (min-width: 768px) {
-  /* body {
+  body {
     padding-top: 0;
     margin-left: 232px;
-  } */
+  }
 
   .fixed-left {
     bottom: 0;

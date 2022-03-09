@@ -21,7 +21,7 @@ const NavBar = () => (
   //   </div>
   // </div>
 
-  <nav className="navbar navbar-expand navbar-dark bg-primary fixed-left">
+  <nav className="navbar nav-mobile navbar-expand navbar-dark bg-primary fixed-left">
     <a className="navbar-brand" href>Logo</a>
 
     <div className="collapse navbar-collapse">
@@ -32,8 +32,8 @@ const NavBar = () => (
         <li className="">
           <Link to="/myappointments" className="nav-link">My Appointments</Link>
         </li>
-        <li className="pt-5 pl-5">
-          <LogOut />
+        <li className="">
+          <LogOut style={{ marginLeft: '' }} />
         </li>
       </ul>
     </div>

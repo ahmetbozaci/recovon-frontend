@@ -24,7 +24,7 @@ const LogOut = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <button className="lgbtn" type="submit" onClick={handleSubmit}>Logout</button>
+      <button className="btn btn-secondary" type="submit" onClick={handleSubmit}>Logout</button>
     </form>
   );
 };
