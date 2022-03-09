@@ -1,5 +1,3 @@
-/** @format */
-
 import { useSelector, useDispatch } from 'react-redux';
 import '../assets/style/doctor.css';
 import { Carousel } from 'react-bootstrap';

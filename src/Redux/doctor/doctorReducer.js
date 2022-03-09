@@ -16,7 +16,7 @@ const doctorReducer = (state = initialState, action) => {
       };
     case FETCH_ONE_DOCTOR_SUCCESS:
       return {
-        oneDoctor: [action.payload],
+        ...state, oneDoctor: [action.payload],
       };
     default: return state;
   }
