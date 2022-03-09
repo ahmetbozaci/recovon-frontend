@@ -1,0 +1,12 @@
+.appointmentMargin {
+  margin-top: 56px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media (min-width: 768px) {
+  .appointmentMargin {
+    margin-left: 332px;
+    margin-right: 100px;
+  }
+}

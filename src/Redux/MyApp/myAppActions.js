@@ -35,12 +35,10 @@ export const fetchMyApp = () => (dispatch) => {
   dispatch(fetchMyAppRequest());
   axios.get('https://final-api-55.herokuapp.com/appointments')
     .then((response) => {
-      // response.data is the array of users
       const myApp = response.data;
       dispatch(fetchMyAppSuccess(myApp));
     })
     .catch((error) => {
-      // error.message is the error description
       const errorMsg = error.message;
       dispatch(fetchMyAppFailure(errorMsg));
     });

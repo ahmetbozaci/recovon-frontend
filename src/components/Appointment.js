@@ -1,22 +1,24 @@
-/** @format */
-
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import createAppointment from '../Redux/Appointment/API';
-import './style/appointment.css';
+import '../assets/style/appointment.css';
 
 const Appointment = () => {
   const dispatch = useDispatch();
+  const oneDoctor = useSelector((state) => state.doctorReducer.oneDoctor);
+  // console.log('doctor name', oneDoctor[0].name);
+  // useEffect(() => oneDoctor[0].name);
+
   const [state, setState] = useState({
     date: '',
     time: '',
     userID: 1, // current_user
-    doctorID: 1, // state
+    doctorID: '', // state
   });
 
   const {
-    date, time, userID, doctorID,
+    date, time, userID,
   } = state;
 
   const handleChange = (event) => {
@@ -30,17 +32,23 @@ const Appointment = () => {
       date,
       time,
       userID,
-      doctorID,
+      doctorID: oneDoctor[0].id,
     };
     dispatch(createAppointment(newAppointment));
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form className="appointmentMargin" onSubmit={handleSubmit}>
       <br />
       <br />
       {/* Disable weekends */}
-      <h1>Appointment</h1>
+      <h2 className="pb-3">Fill the form to create your appointment</h2>
+      <div>
+        {oneDoctor
+                && oneDoctor.map((d) => (
+                  <h4 key={d.id}>{d.name}</h4>
+                ))}
+      </div>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control
           type="date"
@@ -64,9 +72,9 @@ const Appointment = () => {
         </Form.Text> */}
       </Form.Group>
       {/* Doctor name will come from state */}
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      {/* <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control type="text" disabled value="Doctor name" />
-      </Form.Group>
+      </Form.Group> */}
       <Button variant="primary" type="submit">
         Create Appointment
       </Button>

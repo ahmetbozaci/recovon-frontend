@@ -1,9 +1,11 @@
 import {
   FETCH_DOCTORS_SUCCESS,
+  FETCH_ONE_DOCTOR_SUCCESS,
 } from './doctorActions';
 
 const initialState = {
   doctors: [],
+  oneDoctor: [],
 };
 
 const doctorReducer = (state = initialState, action) => {
@@ -11,6 +13,10 @@ const doctorReducer = (state = initialState, action) => {
     case FETCH_DOCTORS_SUCCESS:
       return {
         doctors: [...action.payload],
+      };
+    case FETCH_ONE_DOCTOR_SUCCESS:
+      return {
+        ...state, oneDoctor: [action.payload],
       };
     default: return state;
   }

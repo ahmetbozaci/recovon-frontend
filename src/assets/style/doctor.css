@@ -1,0 +1,60 @@
+.caro {
+  /* width: 75%; */
+}
+
+@media (max-width: 768px) {
+  .doctorMargin {
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: 768px) {
+  .doctorMargin {
+    margin-left: 232px;
+  }
+
+  .maincaro {
+    /* background-image: url("../images/wall2.avif"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .docimg {
+    width: 43%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 2.5rem;
+    margin-left: 17rem;
+    border-radius: 4rem;
+  }
+
+  .caption {
+    position: absolute;
+    right: 15%;
+    bottom: 5.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .docbtn {
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .createapp {
+    text-decoration: none;
+    font-size: smaller;
+    font-weight: bold;
+    color: rebeccapurple;
+  }
+
+  .docname {
+    font-size: smaller;
+    font-weight: bold;
+    color: rebeccapurple;
+  }
+}
