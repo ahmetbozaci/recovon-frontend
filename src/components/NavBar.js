@@ -27,7 +27,7 @@ const NavBar = () => (
     <div className="collapse navbar-collapse">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link to="/" className="nav-link">Doctors</Link>
+          <Link to="/doctors" className="nav-link">Doctors</Link>
         </li>
         <li className="">
           <Link to="/myappointments" className="nav-link">My Appointments</Link>

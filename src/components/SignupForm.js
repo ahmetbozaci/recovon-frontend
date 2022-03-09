@@ -24,7 +24,7 @@ const Signup = () => {
 
   useEffect(() => {
     if (status) {
-      navigate('/doctor');
+      navigate('/doctors');
     }
   });
 
@@ -45,76 +45,73 @@ const Signup = () => {
   };
 
   return (
-    <div className="form-container vh-100 ">
-      <div className="m-auto">
-        <Form onSubmit={handleSubmit} className="m-auto signup-form">
-          <h1 className="text-center">Sign Up</h1>
-          <Form.Group className="mb-2" controlId="formBasicUsername">
-            <Form.Label>
-              <h5 className="text-muted">Username</h5>
-            </Form.Label>
-            <Form.Control
-              placeholder="Username"
-              type="text"
-              name="name"
-              value={name}
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-2" controlId="formBasicEmail">
-            <Form.Label>
-              <h5 className="text-muted">Email address</h5>
-            </Form.Label>
-            <Form.Control
-              placeholder="Enter email"
-              type="text"
-              name="email"
-              value={email}
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-2" controlId="formBasicPassword">
-            <Form.Label>
-              <h5 className="text-muted">Password</h5>
-            </Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Enter password"
-              name="password"
-              value={password}
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Form.Group className="mb-2" controlId="formBasicPassword">
-            <Form.Label>
-              <h5 className="text-muted">Password confirmation</h5>
-            </Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Enter password again"
-              name="passwordConfirmation"
-              value={passwordConfirmation}
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <div className="d-grid gap-2 mt-3">
-            <Button variant="primary" size="lg" type="submit">
-              Sign Up
-            </Button>
-          </div>
-          <p className="text-muted signin-text">
-            <small>
-              Already registered
-              <Link to="/login" className="signin-link">
-                {' '}
-                sign in
-              </Link>
-            </small>
-          </p>
-        </Form>
-      </div>
+    <div className="m-auto form-container vh-100">
+      <Form onSubmit={handleSubmit} className="m-auto signup-form">
+        <h1 className="text-center">Sign Up</h1>
+        <Form.Group className="mb-2" controlId="formBasicUsername">
+          <Form.Label>
+            <h5 className="text-muted">Username</h5>
+          </Form.Label>
+          <Form.Control
+            placeholder="Username"
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-2" controlId="formBasicEmail">
+          <Form.Label>
+            <h5 className="text-muted">Email address</h5>
+          </Form.Label>
+          <Form.Control
+            placeholder="Enter email"
+            type="text"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-2" controlId="formBasicPassword">
+          <Form.Label>
+            <h5 className="text-muted">Password</h5>
+          </Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Enter password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
+        </Form.Group>
+        <Form.Group className="mb-2" controlId="formBasicPassword">
+          <Form.Label>
+            <h5 className="text-muted">Password confirmation</h5>
+          </Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Enter password again"
+            name="passwordConfirmation"
+            value={passwordConfirmation}
+            onChange={handleChange}
+          />
+        </Form.Group>
+        <div className="d-grid gap-2 mt-3">
+          <Button variant="primary" size="lg" type="submit">
+            Sign Up
+          </Button>
+        </div>
+        <p className="text-muted signin-text">
+          <small>
+            Already registered
+            <Link to="/login" className="signin-link">
+              {' '}
+              sign in
+            </Link>
+          </small>
+        </p>
+      </Form>
     </div>
   );
 };
-
 export default Signup;
