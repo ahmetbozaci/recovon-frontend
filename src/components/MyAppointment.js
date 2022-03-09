@@ -7,11 +7,9 @@ import '../assets/style/myApp.css';
 // import fetchDoctor from '../Redux/Doctor/doctorActions';
 
 const MyAppointment = () => {
-  const myAppData = useSelector((state) => state.myAppReducer.myApp);
-  // const doctorData = useSelector((state) => state.doctorReducer.doctors);
+  const myAppData = useSelector((state) => state.myAppReducer.myApp); //contain doctor_id
+  const doctorData = useSelector((state) => state.doctorReducer.doctors); // contain id AS doctor_id
   // console.log('doctor data inside appointment', doctorData);
-  // const doctorId = doctorData.map((d) => d.id);
-  // console.log('all doctors id', doctorId);
 
   // console.log('here is myAppData THE STATE', myAppData);
   const dispatch = useDispatch();
@@ -20,9 +18,7 @@ const MyAppointment = () => {
     dispatch(fetchMyApp());
   }, []);
 
-  // useEffect(() => {
-  //   dispatch(fetchDoctor());
-  // }, []);
+  
 
   return (
     <div className="p-2 myAppMargin">
@@ -32,11 +28,15 @@ const MyAppointment = () => {
                 && myAppData.map((d) => (
                   <div className="card mb-3 p-2" key={d.id}>
                     <div className="row g-0">
+                    <div>
+                      The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+                    </div>
                       <div className="col-md-4">
                         <h2>
-                          Doctor name:
-                          {' '}
-                          {d.doctor_id}
+                          {doctorData.map((doctor) => {
+                            {doctor.id === d.id ? <p>Doctor name: {doctor.name}</p> : <p />}
+                              
+                          })}
                         </h2>
                       </div>
                       <div className="col-md-8">
