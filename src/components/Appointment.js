@@ -36,11 +36,11 @@ const Appointment = () => {
   };
 
   return (
-    <Form className="form-appointment" onSubmit={handleSubmit}>
+    <Form className="appointmentMargin" onSubmit={handleSubmit}>
       <br />
       <br />
       {/* Disable weekends */}
-      <h1>Appointment</h1>
+      <h2 className="pb-3">Fill the form to create your appointment</h2>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control
           type="date"
