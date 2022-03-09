@@ -1,20 +1,31 @@
 /** @format */
 
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import createAppointment from '../Redux/Appointment/API';
 import '../assets/style/appointment.css';
 
 const Appointment = () => {
   const dispatch = useDispatch();
+  const oneDoctor = useSelector((state) => state.doctorReducer.oneDoctor);
   const [state, setState] = useState({
     date: '',
     time: '',
     userID: 1, // current_user
-    doctorID: 1, // state
+    doctorID: '', // state
   });
 
+  useEffect(() => {
+    if (oneDoctor !== undefined) {
+      setState({
+        ...state,
+        doctorID: oneDoctor[0].id,
+      });
+    }
+  }, []);
+
+  console.log('here s doctorId', state.doctorID);
   const {
     date, time, userID, doctorID,
   } = state;
