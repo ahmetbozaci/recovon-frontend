@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Moment from 'react-moment';
 import 'moment-timezone';
 import { fetchMyApp } from '../Redux/MyApp/myAppActions';
+import '../assets/style/myApp.css';
 // import fetchDoctor from '../Redux/Doctor/doctorActions';
 
 const MyAppointment = () => {
@@ -24,7 +25,7 @@ const MyAppointment = () => {
   // }, []);
 
   return (
-    <div className="p-2">
+    <div className="p-2 myAppMargin">
       <h1 className="p-2 text-center">My Appointments</h1>
       <div>
         {myAppData

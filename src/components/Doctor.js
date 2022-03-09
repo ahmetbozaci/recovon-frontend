@@ -14,7 +14,7 @@ const Doctor = () => {
   }
 
   return (
-    <Carousel className="caro">
+    <Carousel className="caro doctorMargin">
       {
         doctors.map((doc) => (
           <Carousel.Item interval={2000} key={doc.id} className="maincaro">

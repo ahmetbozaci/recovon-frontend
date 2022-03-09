@@ -6,12 +6,12 @@ import '../assets/style/logoutPage.css';
 function Logout() {
   return (
     <section className="mainlogout">
-      <div className="welcomelg text-center ">
+      <div className="logoutButton text-center ">
         {/* <div className="hg3">
           <h1>Be HAPPY,</h1>
           <h1> Be HEALTHY</h1>
         </div> */}
-        <Link to="login"><button type="button" className="btn btn-primary float-down text-center first-page-button"> Start your health experience </button></Link>
+        <Link to="login"><button type="button" className="btn text-center first-page-button"> Start your health experience </button></Link>
       </div>
     </section>
   );

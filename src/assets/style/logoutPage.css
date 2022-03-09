@@ -1,5 +1,49 @@
-.mainlogout {
-  background: url("../images/first-page.jpeg") no-repeat center center fixed;
-  background-size: 100%;
-  height: 100vh;
+@media (max-width: 768px) {
+  .mainlogout {
+    background: url("../images/first-page.jpeg") no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .logoutButton {
+    padding-top: 80vh;
+    padding-left: 5vw;
+  }
+
+  .first-page-button {
+    border-radius: 5rem;
+    background-color: #0139b1;
+    color: white;
+  }
+
+  .first-page-button:hover {
+    border-radius: 5rem;
+    background-color: white;
+    color: #0139b1;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainlogout {
+    background: url("../images/first-page.jpeg") no-repeat center center fixed;
+    background-size: 100%;
+    height: 100vh;
+  }
+
+  .logoutButton {
+    padding-top: 80vh;
+    padding-left: 5vw;
+  }
+
+  .first-page-button {
+    border-radius: 5rem;
+    background-color: #0139b1;
+    color: white;
+  }
+
+  .first-page-button:hover {
+    border-radius: 5rem;
+    background-color: white;
+    color: #0139b1;
+  }
 }
