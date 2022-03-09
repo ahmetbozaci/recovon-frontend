@@ -1,8 +1,11 @@
-# DOCTOR APPOINTMENT 
+# RECOVON 
+
+## Be Online Be Healthy Be Happy
 <!-- Add screenshot, add description of website etc-->
 
+
 The app consumes an API created using the Ruby on Rails framework. 
-Backend Repo link: 
+[Backend Repo link](https://github.com/ahmetbozaci/final-capstone-backend)  
 
 
 ## Built With
@@ -19,8 +22,8 @@ Backend Repo link:
 ## Setup
 - Clone this project
 ```
-- $ git clone `$ https://github.com/ahmetbozaci/`
-- $ cd 
+- $ git clone https://github.com/ahmetbozaci/recovon-frontend
+- $ cd recovon-frontend
 ```
 - Install npm packages
 ```
