@@ -31,13 +31,15 @@
 
   .caption {
     position: absolute;
-    right: 15%;
+    right: 42%;
     bottom: 5.25rem;
-    left: 15%;
+    left: 33%;
     padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 0.25rem;
     color: #fff;
     text-align: center;
+    background-color: blue;
+    border-radius: 4rem;
   }
 
   .docbtn {
