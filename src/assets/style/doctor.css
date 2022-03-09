@@ -14,7 +14,7 @@
   }
 
   .maincaro {
-    background-image: url("../images/wall2.avif");
+    /* background-image: url("../images/wall2.avif"); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

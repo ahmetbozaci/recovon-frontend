@@ -17,20 +17,16 @@
     padding-left: 3vw;
   }
 
-  .nav-element-color {
-    color: white;
+  .nav-element {
     font-size: 13px;
   }
 
-  .nav-element-color:hover {
-    color: silver;
+  .nav-logout-space {
+    /* padding-top: 40vh; */
+    padding-left: 2vw;
   }
 }
 
-.nav-logout-space {
-  /* padding-top: 40vh; */
-  padding-left: 2vw;
-}
 
 @media (min-width: 768px) {
   .nav-logo {
@@ -44,14 +40,6 @@
 
   .nav-element-space {
     padding-left: 3vw;
-  }
-
-  .nav-element-color {
-    color: white;
-  }
-
-  .nav-element-color:hover {
-    color: silver;
   }
 
   .nav-logout-space {

@@ -1,13 +1,18 @@
 .signup-form {
   background-color: rgb(127, 214, 255);
+  border-radius: 1rem;
 }
 
-.form-container {
+/* .form-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   border: 1px solid white;
-  border-radius: 1rem;
+  border-radius: 5rem;
+} */
+
+.form-container {
+  border-radius: 5rem;
 }
 
 .signin-text {

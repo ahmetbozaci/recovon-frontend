@@ -100,7 +100,7 @@ const LoginForm = () => {
                     <button
                       type="submit"
                       className="btn btn-primary"
-                      onClick={() => navigate('/doctor')}
+                      onClick={() => navigate('/doctors')}
                     >
                       Log In
                     </button>
@@ -110,8 +110,10 @@ const LoginForm = () => {
                 <div className="text-center">
                   <div className="text-secondary pt-3 signIn-text">
                     You do not have an account ? Please
+                    {' '}
+                    { ' ' }
                     <Link to="/signup" className="text-primary" type="submit">
-                      Sign up
+                      sign up
                     </Link>
                   </div>
                 </div>

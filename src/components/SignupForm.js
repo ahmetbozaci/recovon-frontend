@@ -45,8 +45,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="m-auto form-container vh-100">
-      <Form onSubmit={handleSubmit} className="m-auto signup-form">
+    <div className="form-container p-5">
+      <Form onSubmit={handleSubmit} className="signup-form m-auto px-5 py-3 w-50">
         <h1 className="text-center">Sign Up</h1>
         <Form.Group className="mb-2" controlId="formBasicUsername">
           <Form.Label>
@@ -96,12 +96,12 @@ const Signup = () => {
             onChange={handleChange}
           />
         </Form.Group>
-        <div className="d-grid gap-2 mt-3">
-          <Button variant="primary" size="lg" type="submit">
+        <div className="text-center">
+          <Button variant="btn btn-primary" size="lg" type="submit">
             Sign Up
           </Button>
         </div>
-        <p className="text-muted signin-text">
+        <p className="text-muted text-center signin-text">
           <small>
             Already registered
             <Link to="/login" className="signin-link">
