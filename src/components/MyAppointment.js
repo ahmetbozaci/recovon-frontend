@@ -26,8 +26,6 @@ const MyAppointment = () => {
                 && myAppData.map((d) => {
                   const { doctor_id: doctorId } = d;
                   const currentDoctor = doctorData.filter((doctor) => doctor.id === doctorId);
-                  console.log('here is the current doctor', currentDoctor);
-                  console.log('here is a doctor id', doctorId);
                   return (
                     <div className="card mb-3 p-2" key={d.id}>
                       <div className="row g-0">
