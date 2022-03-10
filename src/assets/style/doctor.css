@@ -22,7 +22,6 @@
     color: #077ff7;
   }
 
-
   .carousel-inner {
     background-image: url(../images/docbg.jpg);
     background-repeat: no-repeat;
@@ -145,7 +144,7 @@
 
   .docname {
     font-size: medium;
-    font-weight: 5rem;
+    font-weight: bolder;
     color: #077ff7;
   }
 
