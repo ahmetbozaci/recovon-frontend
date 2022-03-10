@@ -14,6 +14,8 @@ The app consumes an API created using the Ruby on Rails framework.
 [Backend Repo link](https://github.com/ahmetbozaci/recovon-backend)  
 
 <!-- Add screenshot, add description of website etc-->
+![](desktop-version.png)
+![](mobile-version.png)
 ## Built With
 
 - React
