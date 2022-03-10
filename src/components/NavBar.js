@@ -26,7 +26,7 @@ const NavBar = () => (
   <nav className="navbar nav-mobile navbar-expand navbar-dark bg-primary fixed-left">
     <img src={recovon} alt="recovon logo" className="nav-logo mx-auto" />
     <h2 className="nav-mobile-logo">Recovon</h2>
-
+    <h3>{localStorage.getItem('currentUser')}</h3>
     <div className="collapse navbar-collapse nav-element-space">
       <ul className="navbar-nav">
         <li className="">

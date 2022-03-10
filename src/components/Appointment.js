@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ const Appointment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const oneDoctor = useSelector((state) => state.doctorReducer.oneDoctor);
-  const currentUserID = useSelector((state) => state.logInReducer.user.id);
+  const status = useSelector((state) => state.appointmentReducer.status);
 
   const [state, setState] = useState({
     date: '',
@@ -19,9 +19,7 @@ const Appointment = () => {
     doctorID: '',
   });
 
-  const {
-    date, time,
-  } = state;
+  const { date, time } = state;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -33,12 +31,17 @@ const Appointment = () => {
     const newAppointment = {
       date,
       time,
-      userID: currentUserID,
+      userID: localStorage.getItem('currentUserId'),
       doctorID: oneDoctor[0].id,
     };
     dispatch(createAppointment(newAppointment));
-    navigate('/myappointments');
   };
+
+  useEffect(() => {
+    if (status) {
+      navigate('/myappointments');
+    }
+  });
 
   return (
     <Form className="appointmentMargin" onSubmit={handleSubmit}>
@@ -46,14 +49,13 @@ const Appointment = () => {
       <br />
       <h2 className="pb-3">Fill the form to create your appointment</h2>
       <div>
-        {oneDoctor
-                && oneDoctor.map((d) => (
-                  <h4 key={d.id}>
-                    Dr .
-                    {' '}
-                    {d.name}
-                  </h4>
-                ))}
+        {oneDoctor && oneDoctor.map((d) => (
+          <h4 key={d.id}>
+            Dr .
+            {' '}
+            {d.name}
+          </h4>
+        ))}
       </div>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control

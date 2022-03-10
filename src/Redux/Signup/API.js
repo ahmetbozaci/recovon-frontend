@@ -15,6 +15,10 @@ const createUser = (user) => async (dispatch) => {
 
   const response = await axios.post(baseURL, newUser);
   const { data } = response;
+  const currentUserName = data.user.name;
+  const currentUserId = data.user.id;
+  localStorage.setItem('currentUserName', currentUserName);
+  localStorage.setItem('currentUserId', currentUserId);
   const { status, errors } = data;
   if (status !== 'error') {
     dispatch(createUserSuccess(data));
