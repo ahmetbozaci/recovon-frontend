@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Moment from 'react-moment';
+import { Button } from 'react-bootstrap';
 import 'moment-timezone';
 import { fetchMyApp } from '../Redux/MyApp/myAppActions';
 import '../assets/style/myApp.css';
@@ -23,27 +24,41 @@ const MyAppointment = () => {
                   const { doctor_id: doctorId } = d;
                   const currentDoctor = doctorData.filter((doctor) => doctor.id === doctorId);
                   return (
-                    <div className="card mb-3 p-2" key={d.id}>
+                    <div className="card mb-3 p-2 ps-lg-5" key={d.id}>
                       <div className="row g-0">
-                        <div className="col-md-4">
-                          <h4>
+                        <div className="col-md-4 m-auto p-4">
+                          <h5>
                             Doctor Name:
+
+                          </h5>
+                          <p className="lead">{currentDoctor[0].name}</p>
+                          <h5>
+                            Location:
+
+                          </h5>
+                          <p className="lead">
                             {' '}
-                            {currentDoctor[0].name}
-                          </h4>
+                            {currentDoctor[0].location}
+                          </p>
+                          <h5>
+                            Specialty:
+
+                          </h5>
+                          <p className="lead">{currentDoctor[0].specification}</p>
                         </div>
                         <div className="col-md-8">
                           <div className="card-body">
-                            <p className="card-text" style={{ fontSize: '1.5rem' }}>
-                              Reservation Date:
+                            <h5>Reservation Date:</h5>
+                            <p className="lead">
                               {' '}
                               <small className="text-muted">{d.date}</small>
                             </p>
-                            <p className="card-text" style={{ fontSize: '1.5rem' }}>
-                              Reservation Time:
+                            <h5> Reservation Time:</h5>
+                            <p className="lead">
                               {' '}
                               <Moment format="HH:MM" className="text-muted">{d.time}</Moment>
                             </p>
+                            <Button type="submit" className="bg-danger"> Cancel</Button>
                           </div>
                         </div>
                       </div>
