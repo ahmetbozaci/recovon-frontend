@@ -8,9 +8,6 @@ const LogOut = () => {
   const dispatch = useDispatch();
 
   const logOutData = useSelector((state) => state.logInReducer);
-  console.log('HERE IS MY LOGOUT DATA', logOutData);
-
-  // const reduxState = useSelector((state) => state.logInReducer);
 
   useEffect(() => {
     if (logOutData.logged_in === false) {

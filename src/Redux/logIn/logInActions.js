@@ -24,20 +24,10 @@ export const logInUser = (user) => async (dispatch) => {
   };
   const response = await fetch(`${baseURL}/login`, exUser);
   const data = await response.json();
-  console.log('Login Data', data);
   // localStorage.setItem('token', JSON.stringify(data.jwt));
-  // localStorage.setItem('ANYNAME', JSON.stringify(data.logged_out));
   dispatch(logInUserSuccess(data));
   return data;
 };
-
-// export const logInUser = (user) => async (dispatch) => {
-//   const xyz = await signInUser(user);
-//   const logInDetails = {
-//     loggedOut: xyz.logged_out,
-//   };
-//   dispatch(logInUserSuccess(logInDetails));
-// };
 
 export const logOutUser = () => async (dispatch) => {
   const currUser = {
@@ -47,16 +37,6 @@ export const logOutUser = () => async (dispatch) => {
 
   const response = await fetch(`${baseURL}/logout`, currUser);
   const data = await response.json();
-  console.log('LogOut Data', data);
-  // localStorage.setItem('ANYNAME', JSON.stringify(data.logged_out));
   dispatch(logOutUserSuccess(data));
   return data;
 };
-
-// export const logOutUser = () => async (dispatch) => {
-//   const xyz = await quitUser();
-//   const logOutDetails = {
-//     loggedOut: xyz.logged_out,
-//   };
-//   dispatch(logOutUserSuccess(logOutDetails));
-// };
