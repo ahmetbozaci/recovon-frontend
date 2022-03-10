@@ -1,20 +1,21 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+
 import createAppointment from '../Redux/Appointment/API';
 import '../assets/style/appointment.css';
 
 const Appointment = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const oneDoctor = useSelector((state) => state.doctorReducer.oneDoctor);
-  // console.log('doctor name', oneDoctor[0].name);
-  // useEffect(() => oneDoctor[0].name);
 
   const [state, setState] = useState({
     date: '',
     time: '',
     userID: 1, // current_user
-    doctorID: '', // state
+    doctorID: '',
   });
 
   const {
@@ -35,13 +36,13 @@ const Appointment = () => {
       doctorID: oneDoctor[0].id,
     };
     dispatch(createAppointment(newAppointment));
+    navigate('/myappointments');
   };
 
   return (
     <Form className="appointmentMargin" onSubmit={handleSubmit}>
       <br />
       <br />
-      {/* Disable weekends */}
       <h2 className="pb-3">Fill the form to create your appointment</h2>
       <div>
         {oneDoctor
@@ -62,7 +63,6 @@ const Appointment = () => {
           required
         />
       </Form.Group>
-      {/* Disable minutes */}
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control
           type="time"
