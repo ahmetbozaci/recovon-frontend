@@ -1,13 +1,19 @@
+[![](https://img.shields.io/badge/Microverse-blueviolet)](https://www.microverse.org/?grsf=04r25h)
+
 # RECOVON 
 
 ## Be Online Be Healthy Be Happy
-<!-- Add screenshot, add description of website etc-->
 
+- Recovon app aimed at helping patients where ever they are in the world
+- They can book an appointment with a doctor.
+- There are different doctors to chose from so your health is always assured by one of them
+- API created with ruby on rails.
+- You can create your appointment and see them in the my appointment page
 
 The app consumes an API created using the Ruby on Rails framework. 
-[Backend Repo link](https://github.com/ahmetbozaci/final-capstone-backend)  
+[Backend Repo link](https://github.com/ahmetbozaci/recovon-backend)  
 
-
+<!-- Add screenshot, add description of website etc-->
 ## Built With
 
 - React
@@ -21,6 +27,7 @@ The app consumes an API created using the Ruby on Rails framework.
 ## Kanban Board
 - Final number of team member is 3.
 - [Kanban Board link](https://github.com/ahmetbozaci/recovon-backend/projects/1)
+![](kanbanboard.png)
 ## Setup
 - Clone this project
 ```
@@ -62,6 +69,11 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- A special thanks to [Microverse](https://www.microverse.org/?grsf=04r25h) for inspiring this project. We are indebted to you all at Microverse
+- A special thanks goes to all our peers at [Microverse](https://www.microverse.org/?grsf=04r25h) for being there for us.
 
 ## 📝 License
 
