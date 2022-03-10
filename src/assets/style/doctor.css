@@ -15,7 +15,8 @@
     font-weight: bolder;
   }
 
-  .docname {
+  .docname,
+  .docnamee {
     font-size: medium;
     font-weight: bolder;
     color: #077ff7;
@@ -38,6 +39,7 @@
     color: #fff;
     text-align: center;
     background-color: rgb(220 220 223);
+    margin-bottom: -7rem;
   }
 
   .docbtn {
@@ -94,14 +96,14 @@
   .caption {
     position: absolute;
     right: 33%;
-    bottom: 5.25rem;
+    bottom: -2.75rem;
     left: 24%;
     padding-top: 1.25rem;
     padding-bottom: 0.25rem;
     color: #fff;
     text-align: center;
     background-color: rgb(220 220 223);
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
   .docbtn {
@@ -131,6 +133,13 @@
     font-size: smaller;
     font-size: medium;
     font-weight: bolder;
+  }
+
+  .docnamee {
+    font-size: medium;
+    font-weight: bolder;
+    color: #077ff7;
+    font-style: italic;
   }
 
   .docname {
