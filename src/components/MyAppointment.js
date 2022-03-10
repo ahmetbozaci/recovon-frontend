@@ -39,17 +39,18 @@ const MyAppointment = () => {
                             {' '}
                             {currentDoctor[0].name}
                           </h4>
-                          {/* <button
-                            onClick={(e) => {
-                              e.preventDefault();
+                          <button
+                            onClick={() => {
+                              dispatch(fetchMyApp());
                               dispatch(deleteAppointment(d.id));
+                              dispatch(fetchMyApp());
                             }}
                             type="submit"
                             className="btn btn-danger"
                           >
                             Cancel
 
-                          </button> */}
+                          </button>
                         </div>
                         <div className="col-md-8">
                           <div className="card-body">
