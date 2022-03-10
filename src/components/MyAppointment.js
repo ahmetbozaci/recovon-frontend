@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Moment from 'react-moment';
 import { Button } from 'react-bootstrap';
 import 'moment-timezone';
-import { fetchMyApp } from '../Redux/MyApp/myAppActions';
+import { fetchMyApp, deleteAppointment } from '../Redux/MyApp/myAppActions';
 import '../assets/style/myApp.css';
 
 const MyAppointment = () => {
@@ -45,6 +45,7 @@ const MyAppointment = () => {
 
                           </h5>
                           <p className="lead">{currentDoctor[0].specification}</p>
+
                         </div>
                         <div className="col-md-8">
                           <div className="card-body">
@@ -58,7 +59,18 @@ const MyAppointment = () => {
                               {' '}
                               <Moment format="HH:MM" className="text-muted">{d.time}</Moment>
                             </p>
-                            <Button type="submit" className="bg-danger mt-4"> Cancel</Button>
+                            <Button
+                              onClick={() => {
+                                dispatch(fetchMyApp());
+                                dispatch(deleteAppointment(d.id));
+                                dispatch(fetchMyApp());
+                              }}
+                              type="submit"
+                              className="btn-danger"
+                            >
+                              Cancel
+
+                            </Button>
                           </div>
                         </div>
                       </div>
