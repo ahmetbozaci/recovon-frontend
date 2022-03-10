@@ -8,10 +8,10 @@ const logInUserSuccess = (users) => ({
   payload: users,
 });
 
-// const logOutUserSuccess = (users) => ({
-//   type: LOGOUT_USER_SUCCESS,
-//   payload: users,
-// });
+const logOutUserSuccess = (users) => ({
+  type: LOGOUT_USER_SUCCESS,
+  payload: users,
+});
 
 export const logInUser = (user) => async (dispatch) => {
   const exUser = {
@@ -39,22 +39,22 @@ export const logInUser = (user) => async (dispatch) => {
 //   dispatch(logInUserSuccess(logInDetails));
 // };
 
-// export const quitUser = async () => {
-//   const currUser = {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//   };
+export const quitUser = async () => {
+  const currUser = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  };
 
-//   const response = await fetch(`${baseURL}/logout`, currUser);
-//   const data = await response.json();
-//   localStorage.setItem('ANYNAME', JSON.stringify(data.logged_out));
-//   return data;
-// };
+  const response = await fetch(`${baseURL}/logout`, currUser);
+  const data = await response.json();
+  localStorage.setItem('ANYNAME', JSON.stringify(data.logged_out));
+  return data;
+};
 
-// export const logOutUser = () => async (dispatch) => {
-//   const xyz = await quitUser();
-//   const logOutDetails = {
-//     loggedOut: xyz.logged_out,
-//   };
-//   dispatch(logOutUserSuccess(logOutDetails));
-// };
+export const logOutUser = () => async (dispatch) => {
+  const xyz = await quitUser();
+  const logOutDetails = {
+    loggedOut: xyz.logged_out,
+  };
+  dispatch(logOutUserSuccess(logOutDetails));
+};
