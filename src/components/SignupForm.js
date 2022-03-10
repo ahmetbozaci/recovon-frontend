@@ -46,7 +46,7 @@ const Signup = () => {
 
   return (
     <div className="form-container p-5">
-      <Form onSubmit={handleSubmit} className="signup-form m-auto px-5 py-3 w-50">
+      <Form onSubmit={handleSubmit} className="signUp-form m-auto py-3">
         <h1 className="text-center">Sign Up</h1>
         <Form.Group className="mb-2" controlId="formBasicUsername">
           <Form.Label>
