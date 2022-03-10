@@ -66,10 +66,9 @@ const MyAppointment = () => {
                                 dispatch(fetchMyApp());
                               }}
                               type="submit"
-                              className="btn-danger"
+                              className="btn-danger mt-4"
                             >
                               Cancel
-
                             </Button>
                           </div>
                         </div>
