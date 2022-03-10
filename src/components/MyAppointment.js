@@ -2,9 +2,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Moment from 'react-moment';
 import 'moment-timezone';
-import { fetchMyApp } from '../Redux/MyApp/myAppActions';
+import { fetchMyApp, deleteAppointment } from '../Redux/MyApp/myAppActions';
 import '../assets/style/myApp.css';
-// import fetchDoctor from '../Redux/Doctor/doctorActions';
 
 const MyAppointment = () => {
   const myAppData = useSelector((state) => state.myAppReducer.myApp); // contain doctor_id
@@ -17,6 +16,11 @@ const MyAppointment = () => {
   useEffect(() => {
     dispatch(fetchMyApp());
   }, []);
+
+  // const handleClick = (id, e) => {
+  //   e.preventdefault();
+  //   dispatch(deleteAppointment(id));
+  // };
 
   return (
     <div className="p-2 myAppMargin">
@@ -35,6 +39,17 @@ const MyAppointment = () => {
                             {' '}
                             {currentDoctor[0].name}
                           </h4>
+                          {/* <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              dispatch(deleteAppointment(d.id));
+                            }}
+                            type="submit"
+                            className="btn btn-danger"
+                          >
+                            Cancel
+
+                          </button> */}
                         </div>
                         <div className="col-md-8">
                           <div className="card-body">

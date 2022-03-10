@@ -35,6 +35,7 @@ const myAppReducer = (state = initialState, action) => {
 
     case DELETE_MY_APP_SUCCESS:
       return {
+        ...state,
         myApp: state.myApp.filter((del) => del.id !== action.payload),
       };
 
