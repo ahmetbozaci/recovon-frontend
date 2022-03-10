@@ -6,6 +6,68 @@
   .doctorMargin {
     margin-top: 56px;
   }
+
+  .createapp1 :hover {
+    background: white;
+    text-decoration: none;
+    font-size: smaller;
+    font-size: medium;
+    font-weight: bolder;
+  }
+
+  .docname {
+    font-size: medium;
+    font-weight: bolder;
+    color: #077ff7;
+  }
+
+  .carousel-inner {
+    background-image: url(../images/docbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .caption {
+    position: absolute;
+    right: -1%;
+    bottom: -5.75rem;
+    left: 0%;
+    padding-top: 1.25rem;
+    padding-bottom: 0.25rem;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(220 220 223);
+  }
+
+  .docbtn {
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: larger;
+    background: #077ff7;
+  }
+
+  .docbtn :hover {
+    background: #f9fafb;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .createapp {
+    text-decoration: none;
+    font-size: smaller;
+    font-size: medium;
+    font-weight: bolder;
+    color: #f9fafb;
+  }
+
+  .createapp :hover {
+    background: white;
+    text-decoration: none;
+    font-size: smaller;
+    font-size: medium;
+    font-weight: bolder;
+  }
 }
 
 @media (min-width: 768px) {
@@ -31,30 +93,55 @@
 
   .caption {
     position: absolute;
-    right: 15%;
+    right: 33%;
     bottom: 5.25rem;
-    left: 15%;
+    left: 24%;
     padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 0.25rem;
     color: #fff;
     text-align: center;
+    background-color: rgb(220 220 223);
+    margin-bottom: 5rem;
   }
 
   .docbtn {
-    border-radius: 2rem;
-    margin-bottom: 5rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: larger;
+    background: #077ff7;
+  }
+
+  .docbtn :hover {
+    background: #f9fafb;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .createapp {
     text-decoration: none;
     font-size: smaller;
-    font-weight: bold;
-    color: rebeccapurple;
+    font-size: medium;
+    font-weight: bolder;
+    color: #f9fafb;
+  }
+
+  .createapp :hover {
+    background: white;
+    text-decoration: none;
+    font-size: smaller;
+    font-size: medium;
+    font-weight: bolder;
   }
 
   .docname {
-    font-size: smaller;
-    font-weight: bold;
-    color: rebeccapurple;
+    font-size: medium;
+    font-weight: bolder;
+    color: #077ff7;
+  }
+
+  .carousel-inner {
+    background-image: url(../images/docbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

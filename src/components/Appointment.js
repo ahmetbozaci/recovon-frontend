@@ -46,7 +46,11 @@ const Appointment = () => {
       <div>
         {oneDoctor
                 && oneDoctor.map((d) => (
-                  <h4 key={d.id}>{d.name}</h4>
+                  <h4 key={d.id}>
+                    Dr .
+                    {' '}
+                    {d.name}
+                  </h4>
                 ))}
       </div>
       <Form.Group className="mb-3" controlId="formBasicEmail">
