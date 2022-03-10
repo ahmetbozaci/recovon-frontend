@@ -8,6 +8,7 @@ import recovon from '../assets/images/recovon-logos-transparent.png';
 // import logo from '../assets/images/logo.jpg';
 
 const NavBar = () => (
+  // const currentUserID = useSelector((state) => state.logInReducer.user.id);
   // <div className="Navigation1">
   //   <ul className="navbar-nav">
   //     <li className="logo">
