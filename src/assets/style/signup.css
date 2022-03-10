@@ -1,18 +1,6 @@
-.signup-form {
+.signUp-form {
   background-color: rgb(127, 214, 255);
   border-radius: 1rem;
-}
-
-/* .form-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid white;
-  border-radius: 5rem;
-} */
-
-.form-container {
-  border-radius: 5rem;
 }
 
 .signin-text {
@@ -27,4 +15,18 @@
 
 .input {
   width: 100px;
+}
+
+@media (max-width: 768px) {
+  .signUp-form {
+    width: 100%;
+    padding: 0 7vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .signUp-form {
+    width: 50vw;
+    padding: 0 4vw;
+  }
 }
