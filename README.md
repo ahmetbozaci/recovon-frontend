@@ -18,7 +18,9 @@ The app consumes an API created using the Ruby on Rails framework.
 
 []()
 
-
+## Kanban Board
+- Final number of team member is 3.
+- [Kanban Board link](https://github.com/ahmetbozaci/recovon-backend/projects/1)
 ## Setup
 - Clone this project
 ```
