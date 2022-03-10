@@ -1,23 +1,21 @@
 /** @format */
 
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useNavigate, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { logInUser } from '../Redux/logIn/logInActions';
-// import loginUser from '../Redux/logIn/API';
 import '../assets/style/login.css';
 
 const LoginForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const logInData = useSelector((state) => state.logInReducer);
 
-  // const reduxState = useSelector((state) => state.logInReducer);
-
-  // useEffect(() => {
-  //   if (reduxState.loggedOut === false) {
-  //     navigate('/doctor');
-  //   }
-  // }, [reduxState]);
+  useEffect(() => {
+    if (logInData.logged_in === true) {
+      navigate('/doctors');
+    }
+  });
 
   const [state, setState] = useState({
     email: '',
@@ -33,11 +31,7 @@ const LoginForm = () => {
       [name]: value,
     });
   };
-  //  useEffect = () => {
-  //   if (success) {
-  //     navigate('/doctors');
-  //   }
-  // };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const exUser = {
@@ -45,7 +39,6 @@ const LoginForm = () => {
       password,
     };
     dispatch(logInUser(exUser));
-    // dispatch(loginUser(exUser));
   };
 
   return (
@@ -100,7 +93,6 @@ const LoginForm = () => {
                     <button
                       type="submit"
                       className="btn btn-primary"
-                      onClick={() => navigate('/doctors')}
                     >
                       Log In
                     </button>

@@ -7,15 +7,13 @@ const LogOut = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const state = useSelector((state) => state.logInReducer);
-  // console.log('useSelector logout state', state);
-  const { loggedOut } = state;
+  const logOutData = useSelector((state) => state.logInReducer);
 
   useEffect(() => {
-    if (loggedOut) {
-      navigate('/login');
+    if (logOutData.logged_in === false) {
+      navigate('/');
     }
-  }, [loggedOut]);
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
