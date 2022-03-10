@@ -58,7 +58,7 @@ const MyAppointment = () => {
                               {' '}
                               <Moment format="HH:MM" className="text-muted">{d.time}</Moment>
                             </p>
-                            <Button type="submit" className="bg-danger"> Cancel</Button>
+                            <Button type="submit" className="bg-danger mt-4"> Cancel</Button>
                           </div>
                         </div>
                       </div>
