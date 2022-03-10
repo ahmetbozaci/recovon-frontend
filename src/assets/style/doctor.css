@@ -6,6 +6,71 @@
   .doctorMargin {
     margin-top: 56px;
   }
+
+  .createapp :hover {
+    background: white;
+    text-decoration: none;
+    font-size: smaller;
+    font-size: medium;
+    font-weight: bolder;
+  }
+
+  .docname {
+    font-size: medium;
+    font-weight: bolder;
+    color: #077ff7;
+  }
+
+  .carousel-inner {
+    background-image: url(../images/docbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .caption {
+    position: absolute;
+    right: -1%;
+    bottom: -5.75rem;
+    left: 0%;
+    padding-top: 1.25rem;
+    padding-bottom: 0.25rem;
+    color: #fff;
+    text-align: center;
+    /* margin-top: -2rem; */
+    background-color: rgb(220 220 223);
+    border-radius: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .docbtn {
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: larger;
+    background: #077ff7;
+  }
+
+  .docbtn :hover {
+    background: #f9fafb;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .createapp {
+    text-decoration: none;
+    font-size: smaller;
+    font-size: medium;
+    font-weight: bolder;
+    color: #f9fafb;
+  }
+
+  .createapp :hover {
+    background: white;
+    text-decoration: none;
+    font-size: smaller;
+    font-size: medium;
+    font-weight: bolder;
+  }
 }
 
 @media (min-width: 768px) {
@@ -18,7 +83,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    
+
   }
 
   .docimg {
@@ -47,7 +112,8 @@
   .docbtn {
     border-radius: 1rem;
     margin-bottom: 1.5rem;
-    font-size: larger;;
+    font-size: larger;
+    ;
     background: #077ff7;
   }
 
