@@ -10,16 +10,16 @@ const Appointment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const oneDoctor = useSelector((state) => state.doctorReducer.oneDoctor);
-  const status = useSelector((state) => state.appointmentReducer.status);
 
   const [state, setState] = useState({
     date: '',
     time: '',
     userID: '',
     doctorID: '',
+    status: false,
   });
 
-  const { date, time } = state;
+  const { date, time, status } = state;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -35,11 +35,13 @@ const Appointment = () => {
       doctorID: oneDoctor[0].id,
     };
     dispatch(createAppointment(newAppointment));
+    setState({ ...state, status: true });
   };
 
   useEffect(() => {
     if (status) {
       navigate('/myappointments');
+      setState({ ...state, status: false });
     }
   });
 
