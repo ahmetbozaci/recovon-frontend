@@ -1,13 +1,12 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import store from './Redux/store';
-// import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
-  Doctor, Appointment, MyAppointment, NotMatch, SignupForm, LoginForm, NavBar, LogoutPage,
+  Doctor, Appointment, MyAppointment,
+  NotMatch, SignupForm, LoginForm, NavBar, LogoutPage,
 } from './components/Index';
 
 const SidebarLayout = () => (
@@ -23,7 +22,6 @@ function App() {
       <div className="App">
         <Routes>
           <Route element={<SidebarLayout />}>
-            {/* <Route path="/" element={<Doctor />} /> */}
             <Route path="doctors" element={<Doctor />} />
             <Route path="myappointments" element={<MyAppointment />} />
             <Route path="appointment" element={<Appointment />} />

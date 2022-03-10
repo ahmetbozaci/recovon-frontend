@@ -74,14 +74,7 @@ const Appointment = () => {
           name="time"
           required
         />
-        {/* <Form.Text className="text-muted">
-          Choose time 09:00 AM to 05:00 PM
-        </Form.Text> */}
       </Form.Group>
-      {/* Doctor name will come from state */}
-      {/* <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control type="text" disabled value="Doctor name" />
-      </Form.Group> */}
       <Button variant="primary" type="submit">
         Create Appointment
       </Button>

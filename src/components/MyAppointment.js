@@ -4,14 +4,10 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 import { fetchMyApp } from '../Redux/MyApp/myAppActions';
 import '../assets/style/myApp.css';
-// import fetchDoctor from '../Redux/Doctor/doctorActions';
 
 const MyAppointment = () => {
-  const myAppData = useSelector((state) => state.myAppReducer.myApp); // contain doctor_id
-  const doctorData = useSelector((state) => state.doctorReducer.doctors); // contain id AS doctor_id
-  // console.log('doctor data inside appointment', doctorData);
-
-  // console.log('here is myAppData THE STATE', myAppData);
+  const myAppData = useSelector((state) => state.myAppReducer.myApp);
+  const doctorData = useSelector((state) => state.doctorReducer.doctors);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -38,7 +34,6 @@ const MyAppointment = () => {
                         </div>
                         <div className="col-md-8">
                           <div className="card-body">
-                            {/* <h5 className="card-title">Card title</h5> */}
                             <p className="card-text" style={{ fontSize: '1.5rem' }}>
                               Reservation Date:
                               {' '}

@@ -33,7 +33,7 @@ const Doctor = () => {
               {doc.location}
             </h3>
             <h3 className="docname">
-              Speciality:
+              Specialty:
               {doc.specification}
             </h3>
             <button className="docbtn" type="button" onClick={handleClick}>
