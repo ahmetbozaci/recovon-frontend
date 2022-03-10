@@ -28,6 +28,14 @@ const Doctor = () => {
               Dr .
               {doc.name}
             </h3>
+            <h3 className="docname">
+              Location:
+              {doc.location}
+            </h3>
+            <h3 className="docname">
+              Speciality:
+              {doc.specification}
+            </h3>
             <button className="docbtn" type="button" onClick={handleClick}>
               <Link to="/appointment" className="createapp" id={doc.id}>
                 {' '}
