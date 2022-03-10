@@ -10,16 +10,17 @@ const Appointment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const oneDoctor = useSelector((state) => state.doctorReducer.oneDoctor);
+  const currentUserID = useSelector((state) => state.logInReducer.user.id);
 
   const [state, setState] = useState({
     date: '',
     time: '',
-    userID: 1, // current_user
+    userID: '',
     doctorID: '',
   });
 
   const {
-    date, time, userID,
+    date, time,
   } = state;
 
   const handleChange = (event) => {
@@ -32,7 +33,7 @@ const Appointment = () => {
     const newAppointment = {
       date,
       time,
-      userID,
+      userID: currentUserID,
       doctorID: oneDoctor[0].id,
     };
     dispatch(createAppointment(newAppointment));
