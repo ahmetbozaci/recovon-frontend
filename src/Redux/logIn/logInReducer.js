@@ -9,7 +9,6 @@ const logInReducer = (state = initialState, action) => {
         ...action.payload,
       };
     case LOGOUT_USER_SUCCESS:
-      // console.log('action.payload line 11', action.payload);
       return {
         ...action.payload,
       };
