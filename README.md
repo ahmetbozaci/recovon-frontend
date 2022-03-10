@@ -6,9 +6,9 @@
 
 - Recovon app aimed at helping patients where ever they are in the world
 - They can book an appointment with a doctor.
-- There are different doctors to chose from so your health is always assured by one of them
+- There are different doctors to choose from so your health is always assured by one of them
 - API created with ruby on rails.
-- You can create your appointment and see them in the my appointment page
+- You can create your appointment and see them on my appointment page
 
 The app consumes an API created using the Ruby on Rails framework. 
 [Backend Repo link](https://github.com/ahmetbozaci/recovon-backend)  
