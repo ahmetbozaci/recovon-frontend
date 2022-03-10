@@ -24,17 +24,28 @@ const Doctor = () => {
         <Carousel.Item interval={2000} key={doc.id} className="maincaro">
           <img className="docimg" src={doc.picture} alt="First slide" />
           <Carousel.Caption className="caption">
-            <h3 className="docname">
+            <h3 className="docname11">
               Dr .
               {doc.name}
             </h3>
             <h3 className="docname">
               Location:
+              {' '}
               {doc.location}
             </h3>
             <h3 className="docname">
+              Price:
+              {' $'}
+              {doc.price}
+            </h3>
+            <h3 className="docname">
               Speciality:
+              {' '}
               {doc.specification}
+            </h3>
+            <h3 className="docnamee">
+              {' '}
+              {doc.description}
             </h3>
             <button className="docbtn" type="button" onClick={handleClick}>
               <Link to="/appointment" className="createapp" id={doc.id}>
