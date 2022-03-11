@@ -18,8 +18,10 @@ const MyAppointment = () => {
   return (
     <div className="p-2 myAppMargin">
       <h1 className="p-2 text-center">My Appointments</h1>
-      <div>
-        {myAppData
+      {myAppData.length === 0 ? <h4 className="p-3">Currently you do not have any appointments</h4>
+        : (
+          <div>
+            {myAppData
                 && myAppData.map((d) => {
                   const { doctor_id: doctorId } = d;
                   const currentDoctor = doctorData.filter((doctor) => doctor.id === doctorId);
@@ -75,7 +77,8 @@ const MyAppointment = () => {
                     </div>
                   );
                 })}
-      </div>
+          </div>
+        )}
     </div>
 
   );
