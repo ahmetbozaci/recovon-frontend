@@ -80,6 +80,10 @@
   }
 }
 
+.username {
+  color: white;
+}
+
 .navbar.fixed-left {
   position: fixed;
   top: 0;
