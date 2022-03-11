@@ -7,7 +7,7 @@ import fetchDoctors from './doctor/doctorActions';
 
 const store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(logger, thunk)),
+  composeWithDevTools(applyMiddleware(thunk, logger)),
 );
 store.dispatch(fetchDoctors());
 
