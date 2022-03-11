@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<nav
+  className="navbar nav-mobile navbar-expand navbar-dark bg-primary fixed-left"
+>
+  <img
+    alt="recovon logo"
+    className="nav-logo mx-auto"
+    src="recovon-logos-transparent.png"
+  />
+  <h2
+    className="nav-mobile-logo"
+  >
+    Recovon
+  </h2>
+  <div
+    className="collapse navbar-collapse nav-element-space"
+  >
+    <ul
+      className="navbar-nav"
+    >
+      <li
+        className="username p-lg-2 pb-lg-4"
+      >
+        Welcome
+         
+      </li>
+      <li
+        className=""
+      >
+        <a
+          className="nav-link nav-element"
+          href="/doctors"
+          onClick={[Function]}
+        >
+          Doctors
+        </a>
+      </li>
+      <li
+        className=""
+      >
+        <a
+          className="nav-link nav-element"
+          href="/myappointments"
+          onClick={[Function]}
+        >
+          My Appointments
+        </a>
+      </li>
+      <li
+        className="nav-logout-space"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <button
+            className="btn btn-secondary"
+            onClick={[Function]}
+            type="submit"
+          >
+            Logout
+          </button>
+        </form>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

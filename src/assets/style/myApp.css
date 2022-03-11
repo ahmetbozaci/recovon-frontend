@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .myAppMargin {
+    margin-top: 56px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 768px) {
+  .myAppMargin {
+    margin-left: 232px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

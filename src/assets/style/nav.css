@@ -1,0 +1,96 @@
+@media (max-width: 768px) {
+  .username {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .nav-mobile-logo {
+    color: white;
+    font-size: 1.3rem;
+    padding-left: 2vw;
+  }
+
+  .nav-element-space {
+    padding-left: 3vw;
+  }
+
+  .nav-element {
+    font-size: 13px;
+  }
+
+  .nav-logout-space {
+    padding-left: 2vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-logo {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .nav-mobile-logo {
+    display: none;
+  }
+
+  .nav-element-space {
+    padding-left: 3vw;
+  }
+
+  .nav-logout-space {
+    padding-top: 40vh;
+    padding-left: 2vw;
+  }
+
+  .fixed-left {
+    bottom: 0;
+    width: 232px;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    right: auto;
+  }
+
+  .fixed-left .navbar-collapse {
+    flex-grow: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .fixed-left .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .fixed-left .navbar-nav .nav-item {
+    border-top: 0.3em solid transparent;
+    border-left: 0.3em solid;
+    border-bottom: 0.3em solid transparent;
+    border-right: none;
+    vertical-align: baseline;
+    left: 100%;
+  }
+
+  .fixed-left .navbar-collapse .navbar-nav .nav-item {
+    top: 0;
+    width: 100%;
+  }
+}
+
+.username {
+  color: white;
+}
+
+.navbar.fixed-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}

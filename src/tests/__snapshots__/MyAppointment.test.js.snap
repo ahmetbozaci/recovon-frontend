@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyAppointment renders correctly 1`] = `
+<div
+  className="p-2 myAppMargin"
+>
+  <h1
+    className="p-2 text-center"
+  >
+    My Appointments
+  </h1>
+  <h4
+    className="p-3"
+  >
+    Currently you do not have any appointments
+  </h4>
+</div>
+`;

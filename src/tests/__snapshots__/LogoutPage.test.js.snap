@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoutPage renders correctly 1`] = `
+<section
+  className="mainlogout"
+>
+  <div
+    className="first-page-logo-div"
+  >
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      <img
+        alt="recovon logo"
+        className="first-page-logo"
+        src="recovon-logos-transparent.png"
+      />
+    </a>
+  </div>
+  <div
+    className="logoutButton text-center"
+  >
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      <button
+        className="btn text-center first-page-button"
+        type="button"
+      >
+         Start your health experience 
+      </button>
+    </a>
+  </div>
+</section>
+`;
