@@ -3,7 +3,7 @@ import axios from 'axios';
 export const FETCH_MY_APP_REQUEST = 'FETCH_MY_APP_REQUEST';
 export const FETCH_MY_APP_SUCCESS = 'FETCH_MY_APP_SUCCESS';
 export const FETCH_MY_APP_FAILURE = 'FETCH_MY_APP_FAILURE';
-export const DELETE_MY_APP_SUCCESS = 'FETCH_MY_APP_FAILURE';
+export const DELETE_MY_APP_SUCCESS = 'DELETE_MY_APP_SUCCESS';
 
 const fetchMyAppRequest = () => ({
   type: FETCH_MY_APP_REQUEST,
