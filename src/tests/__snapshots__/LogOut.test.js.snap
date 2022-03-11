@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogOut renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <button
+    className="btn btn-secondary"
+    onClick={[Function]}
+    type="submit"
+  >
+    Logout
+  </button>
+</form>
+`;

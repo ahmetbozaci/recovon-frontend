@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm renders correctly 1`] = `
+<section
+  className="vh-100"
+  style={
+    Object {
+      "backgroundColor": "white",
+    }
+  }
+>
+  <div
+    className="container py-3 h-100"
+  >
+    <div
+      className="row justify-content-center align-items-center h-100"
+    >
+      <div
+        className="col-12 col-md-8 col-lg-6 col-xl-5"
+      >
+        <div
+          className="card shadow-2-strong"
+          style={
+            Object {
+              "borderRadius": "1rem",
+            }
+          }
+        >
+          <div
+            className="card-body p-5 signIn"
+            style={
+              Object {
+                "backgroundColor": "rgb(127, 214, 255)",
+              }
+            }
+          >
+            <h1
+              className="mb-5 text-center"
+            >
+              Sign in
+            </h1>
+            <form
+              onSubmit={[Function]}
+            >
+              <div
+                className="mb-3"
+              >
+                <p
+                  className="form-label text-left"
+                  htmlFor="exampleInputEmail1"
+                >
+                  Email address
+                </p>
+                <input
+                  className="form-control"
+                  id="exampleInputEmail1"
+                  name="email"
+                  onChange={[Function]}
+                  placeholder="Email"
+                  style={
+                    Object {
+                      "borderRadius": "1rem",
+                    }
+                  }
+                  type="email"
+                  value=""
+                />
+              </div>
+              <div
+                className="mb-3"
+              >
+                <p
+                  className="form-label"
+                  htmlFor="exampleInputPassword1"
+                >
+                  Password
+                </p>
+                <input
+                  className="form-control"
+                  name="password"
+                  onChange={[Function]}
+                  placeholder="Password"
+                  style={
+                    Object {
+                      "borderRadius": "1rem",
+                    }
+                  }
+                  type="password"
+                  value=""
+                />
+              </div>
+              <div
+                className="text-center"
+              >
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                >
+                  Log In
+                </button>
+              </div>
+            </form>
+            <div
+              className="text-center"
+            >
+              <div
+                className="text-secondary pt-3 signIn-text"
+              >
+                You do not have an account ? Please
+                 
+                 
+                <a
+                  className="text-primary"
+                  href="/signup"
+                  onClick={[Function]}
+                  type="submit"
+                >
+                  sign up
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

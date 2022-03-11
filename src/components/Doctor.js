@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import '../assets/style/doctor.css';
+// import { useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { fetchOneDoctor } from '../Redux/doctor/doctorActions';
@@ -8,10 +9,6 @@ const Doctor = () => {
   const dispatch = useDispatch();
   const doctor = useSelector((state) => state.doctorReducer);
   const { doctors } = doctor;
-
-  if (doctors.length === 0) {
-    return <h3>....</h3>;
-  }
 
   const handleClick = (event) => {
     const { id } = event.target;

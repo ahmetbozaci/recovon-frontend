@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyAppointment renders correctly 1`] = `
+<div
+  className="p-2 myAppMargin"
+>
+  <h1
+    className="p-2 text-center"
+  >
+    My Appointments
+  </h1>
+  <div />
+</div>
+`;

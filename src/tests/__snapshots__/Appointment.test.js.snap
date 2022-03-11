@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Appointment renders correctly 1`] = `
+<form
+  className="appointmentMargin"
+  onSubmit={[Function]}
+>
+  <br />
+  <br />
+  <h2
+    className="pb-3"
+  >
+    Fill the form to create your appointment
+  </h2>
+  <div />
+  <div
+    className="mb-3"
+  >
+    <input
+      className="form-control"
+      id="formBasicEmail"
+      name="date"
+      onChange={[Function]}
+      required={true}
+      type="date"
+      value=""
+    />
+  </div>
+  <div
+    className="mb-3"
+  >
+    <input
+      className="form-control"
+      id="formBasicEmail"
+      name="time"
+      onChange={[Function]}
+      required={true}
+      type="time"
+      value=""
+    />
+  </div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    type="submit"
+  >
+    Create Appointment
+  </button>
+</form>
+`;

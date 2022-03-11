@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignupForm renders correctly 1`] = `
+<div
+  className="form-container p-5"
+>
+  <form
+    className="signUp-form m-auto py-3"
+    onSubmit={[Function]}
+  >
+    <h1
+      className="text-center"
+    >
+      Sign Up
+    </h1>
+    <div
+      className="mb-2"
+    >
+      <label
+        className="form-label"
+        htmlFor="formBasicUsername"
+      >
+        <h5
+          className="text-muted"
+        >
+          Username
+        </h5>
+      </label>
+      <input
+        className="form-control"
+        id="formBasicUsername"
+        name="name"
+        onChange={[Function]}
+        placeholder="Username"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="mb-2"
+    >
+      <label
+        className="form-label"
+        htmlFor="formBasicEmail"
+      >
+        <h5
+          className="text-muted"
+        >
+          Email address
+        </h5>
+      </label>
+      <input
+        className="form-control"
+        id="formBasicEmail"
+        name="email"
+        onChange={[Function]}
+        placeholder="Enter email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="mb-2"
+    >
+      <label
+        className="form-label"
+        htmlFor="formBasicPassword"
+      >
+        <h5
+          className="text-muted"
+        >
+          Password
+        </h5>
+      </label>
+      <input
+        className="form-control"
+        id="formBasicPassword"
+        name="password"
+        onChange={[Function]}
+        placeholder="Enter password"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="mb-2"
+    >
+      <label
+        className="form-label"
+        htmlFor="formBasicPassword"
+      >
+        <h5
+          className="text-muted"
+        >
+          Password confirmation
+        </h5>
+      </label>
+      <input
+        className="form-control"
+        id="formBasicPassword"
+        name="passwordConfirmation"
+        onChange={[Function]}
+        placeholder="Enter password again"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="text-center"
+    >
+      <button
+        className="btn btn-btn btn-primary btn-lg"
+        disabled={false}
+        type="submit"
+      >
+        Sign Up
+      </button>
+    </div>
+    <p
+      className="text-muted text-center signin-text"
+    >
+      <small>
+        Already registered
+        <a
+          className="signin-link"
+          href="/login"
+          onClick={[Function]}
+        >
+           
+          sign in
+        </a>
+      </small>
+    </p>
+  </form>
+</div>
+`;
