@@ -21,8 +21,10 @@ const Doctor = () => {
         <Carousel.Item interval={2000} key={doc.id} className="maincaro">
           <img className="docimg" src={doc.picture} alt="First slide" />
           <Carousel.Caption className="caption">
-            <h3 className="docname11">
-              Dr .
+            <h3 className="docname11 text-secondary">
+              Dr
+              {' '}
+              { ' ' }
               {doc.name}
             </h3>
             <h3 className="docname">
