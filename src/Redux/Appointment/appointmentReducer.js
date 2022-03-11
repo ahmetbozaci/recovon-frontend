@@ -3,9 +3,10 @@ const CREATE_APPOINTMENT_SUCCESS = 'final-capstone-project/users/CREATE_APPOINTM
 const initialState = [];
 
 const reducer = (state = initialState, action) => {
+  const { payload } = action;
   switch (action.type) {
     case CREATE_APPOINTMENT_SUCCESS:
-      return action.payload;
+      return payload;
     default:
       return state;
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import '../app.css';
 import '../assets/style/logoutPage.css';
 import recovonFirst from '../assets/images/recovon-logos-transparent.png';
 

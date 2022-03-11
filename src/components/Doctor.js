@@ -39,7 +39,7 @@ const Doctor = () => {
               {doc.price}
             </h3>
             <h3 className="docname">
-              Speciality:
+              Specialty:
               {' '}
               {doc.specification}
             </h3>

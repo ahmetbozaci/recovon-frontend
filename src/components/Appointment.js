@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -14,13 +14,12 @@ const Appointment = () => {
   const [state, setState] = useState({
     date: '',
     time: '',
-    userID: 1, // current_user
+    userID: '',
     doctorID: '',
+    status: false,
   });
 
-  const {
-    date, time, userID,
-  } = state;
+  const { date, time, status } = state;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -32,12 +31,19 @@ const Appointment = () => {
     const newAppointment = {
       date,
       time,
-      userID,
+      userID: localStorage.getItem('currentUserId'),
       doctorID: oneDoctor[0].id,
     };
     dispatch(createAppointment(newAppointment));
-    navigate('/myappointments');
+    setState({ ...state, status: true });
   };
+
+  useEffect(() => {
+    if (status) {
+      navigate('/myappointments');
+      setState({ ...state, status: false });
+    }
+  });
 
   return (
     <Form className="appointmentMargin" onSubmit={handleSubmit}>
@@ -45,14 +51,13 @@ const Appointment = () => {
       <br />
       <h2 className="pb-3">Fill the form to create your appointment</h2>
       <div>
-        {oneDoctor
-                && oneDoctor.map((d) => (
-                  <h4 key={d.id}>
-                    Dr .
-                    {' '}
-                    {d.name}
-                  </h4>
-                ))}
+        {oneDoctor && oneDoctor.map((d) => (
+          <h4 key={d.id}>
+            Dr .
+            {' '}
+            {d.name}
+          </h4>
+        ))}
       </div>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control
@@ -71,14 +76,7 @@ const Appointment = () => {
           name="time"
           required
         />
-        {/* <Form.Text className="text-muted">
-          Choose time 09:00 AM to 05:00 PM
-        </Form.Text> */}
       </Form.Group>
-      {/* Doctor name will come from state */}
-      {/* <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control type="text" disabled value="Doctor name" />
-      </Form.Group> */}
       <Button variant="primary" type="submit">
         Create Appointment
       </Button>

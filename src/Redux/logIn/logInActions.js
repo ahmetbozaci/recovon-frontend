@@ -24,7 +24,10 @@ export const logInUser = (user) => async (dispatch) => {
   };
   const response = await fetch(`${baseURL}/login`, exUser);
   const data = await response.json();
-  // localStorage.setItem('token', JSON.stringify(data.jwt));
+  const currentUserName = data.user.name;
+  const currentUserId = data.user.id;
+  localStorage.setItem('currentUserName', currentUserName);
+  localStorage.setItem('currentUserId', currentUserId);
   dispatch(logInUserSuccess(data));
   return data;
 };
