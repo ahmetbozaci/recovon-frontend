@@ -32,6 +32,7 @@ exports[`SignupForm renders correctly 1`] = `
         name="name"
         onChange={[Function]}
         placeholder="Username"
+        required={true}
         type="text"
         value=""
       />
@@ -55,6 +56,7 @@ exports[`SignupForm renders correctly 1`] = `
         name="email"
         onChange={[Function]}
         placeholder="Enter email"
+        required={true}
         type="text"
         value=""
       />
@@ -78,6 +80,7 @@ exports[`SignupForm renders correctly 1`] = `
         name="password"
         onChange={[Function]}
         placeholder="Enter password"
+        required={true}
         type="password"
         value=""
       />
@@ -101,8 +104,13 @@ exports[`SignupForm renders correctly 1`] = `
         name="passwordConfirmation"
         onChange={[Function]}
         placeholder="Enter password again"
+        required={true}
         type="password"
         value=""
+      />
+      <small
+        className="text-muted form-text"
+        id="passwordError"
       />
     </div>
     <div

@@ -21,6 +21,12 @@ exports[`Navbar renders correctly 1`] = `
       className="navbar-nav"
     >
       <li
+        className="username p-lg-2 pb-lg-4"
+      >
+        Welcome
+         
+      </li>
+      <li
         className=""
       >
         <a

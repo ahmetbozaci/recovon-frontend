@@ -9,6 +9,10 @@ exports[`MyAppointment renders correctly 1`] = `
   >
     My Appointments
   </h1>
-  <div />
+  <h4
+    className="p-3"
+  >
+    Currently you do not have any appointments
+  </h4>
 </div>
 `;
