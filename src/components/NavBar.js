@@ -13,7 +13,7 @@ const NavBar = () => (
         <li className="p-lg-2 pb-lg-4">
           Welcome
           {' '}
-          {localStorage.getItem('currentUser')}
+          {localStorage.getItem('currentUserName')}
         </li>
         <li className="">
           <Link to="/doctors" className="nav-link nav-element">
