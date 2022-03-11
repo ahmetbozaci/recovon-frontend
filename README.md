@@ -24,7 +24,7 @@ The app consumes an API created using the Ruby on Rails framework.
 
 ## Live Demo
 
-[]()
+![demo video](demo.gif)
 
 ## Kanban Board
 - Final number of team member is 3.
@@ -76,9 +76,10 @@ Give a ⭐️ if you like this project!
 
 - A special thanks to [Microverse](https://www.microverse.org/?grsf=04r25h) for inspiring this project. We are indebted to you all at Microverse
 - A special thanks goes to all our peers at [Microverse](https://www.microverse.org/?grsf=04r25h) for being there for us.
+- [Creative Common License of design](https://creativecommons.org/licenses/by-nc/4.0/)
+- Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
+
 
 ## 📝 License
 
 * This project is [MIT](./LICENSE) licensed.
-* [Creative Common License of design](https://creativecommons.org/licenses/by-nc/4.0/)
-* Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)

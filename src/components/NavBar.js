@@ -10,7 +10,7 @@ const NavBar = () => (
     <h2 className="nav-mobile-logo">Recovon</h2>
     <div className="collapse navbar-collapse nav-element-space">
       <ul className="navbar-nav">
-        <li className="p-lg-2 pb-lg-4">
+        <li className="username p-lg-2 pb-lg-4">
           Welcome
           {' '}
           {localStorage.getItem('currentUserName')}
