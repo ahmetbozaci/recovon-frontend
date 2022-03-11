@@ -1,7 +1,7 @@
 export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS';
 export const LOGOUT_USER_SUCCESS = 'LOGOUT_USER_SUCCESS';
 
-const baseURL = process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL;
+const baseURL = 'https://final-api-55.herokuapp.com';
 
 const logInUserSuccess = (users) => ({
   type: LOGIN_USER_SUCCESS,
@@ -24,6 +24,7 @@ export const logInUser = (user) => async (dispatch) => {
   };
   const response = await fetch(`${baseURL}/login`, exUser);
   const data = await response.json();
+  console.log(data);
   const currentUserName = data.user.name;
   const currentUserId = data.user.id;
   localStorage.setItem('currentUserName', currentUserName);

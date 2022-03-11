@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createUserSuccess, createUserFailure } from './signupReducer';
 
-const baseURL = `${process.env.REACT_APP_DOCTOR_APPOINTMENT_API_URL}/signup`;
+const baseURL = 'https://final-api-55.herokuapp.com/signup';
 
 const createUser = (user) => async (dispatch) => {
   const newUser = {
