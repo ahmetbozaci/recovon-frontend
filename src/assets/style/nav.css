@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+  .username {
+    display: none;
+  }
+
   .nav-mobile {
     display: flex;
   }
