@@ -60,12 +60,11 @@ const MyAppointment = () => {
                               <Moment format="HH:MM" className="text-muted">{d.time}</Moment>
                             </p>
                             <Button
-                              onClick={() => {
-                                dispatch(fetchMyApp());
-                                dispatch(deleteAppointment(d.id));
+                              onClick={async () => {
+                                await dispatch(deleteAppointment(d.id));
                                 dispatch(fetchMyApp());
                               }}
-                              type="submit"
+                              type="button"
                               className="btn-danger mt-4"
                             >
                               Cancel
